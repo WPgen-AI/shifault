@@ -50,22 +50,36 @@ export const Hero = () => {
           {/* Main Content */}
           <div className="mx-auto max-w-5xl">
             <div className="relative mx-auto h-full bg-card/50 backdrop-blur-sm border border-border rounded-lg py-12 p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)]">
+              {/* SVG Gradient Definition */}
+              <svg width="0" height="0" className="absolute">
+                <defs>
+                  <linearGradient id="plusGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="hsl(25 95% 53%)" />
+                    <stop offset="100%" stopColor="hsl(15 88% 45%)" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              
               {/* Corner Plus Icons */}
               <Plus
                 strokeWidth={4}
-                className="text-accent-primary absolute -left-5 -top-5 h-10 w-10"
+                className="absolute -left-5 -top-5 h-10 w-10"
+                stroke="url(#plusGradient)"
               />
               <Plus
                 strokeWidth={4}
-                className="text-accent-primary absolute -bottom-5 -left-5 h-10 w-10"
+                className="absolute -bottom-5 -left-5 h-10 w-10"
+                stroke="url(#plusGradient)"
               />
               <Plus
                 strokeWidth={4}
-                className="text-accent-primary absolute -right-5 -top-5 h-10 w-10"
+                className="absolute -right-5 -top-5 h-10 w-10"
+                stroke="url(#plusGradient)"
               />
               <Plus
                 strokeWidth={4}
-                className="text-accent-primary absolute -bottom-5 -right-5 h-10 w-10"
+                className="absolute -bottom-5 -right-5 h-10 w-10"
+                stroke="url(#plusGradient)"
               />
               
               {/* Main Heading */}
