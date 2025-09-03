@@ -6,8 +6,8 @@ export const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg shadow-soft"></div>
-            <h1 className="text-xl font-bold text-foreground">NoCode Builder</h1>
+            <div className="w-8 h-8 gradient-primary rounded-lg elevation"></div>
+            <h1 className="text-xl font-heading font-bold text-foreground">NoCode Builder</h1>
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">
@@ -32,7 +32,7 @@ export const Navigation = () => {
             <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
               Sign In
             </Button>
-            <Button className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300">
+            <Button className="gradient-primary text-primary-foreground hover:shadow-glow transition-smooth">
               Get Started Free
             </Button>
           </div>

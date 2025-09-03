@@ -41,7 +41,7 @@ export const FAQ = () => {
     <section id="faq" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -53,7 +53,7 @@ export const FAQ = () => {
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border border-border rounded-lg px-6 bg-card">
-                <AccordionTrigger className="text-left font-semibold hover:text-primary transition-colors">
+                <AccordionTrigger className="text-left font-heading font-semibold hover:text-primary transition-smooth">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed pb-4">
@@ -68,7 +68,7 @@ export const FAQ = () => {
           <p className="text-muted-foreground mb-4">
             Still have questions?
           </p>
-          <button className="bg-gradient-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105">
+          <button className="gradient-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-glow transition-smooth hover-lift">
             Contact Support
           </button>
         </div>

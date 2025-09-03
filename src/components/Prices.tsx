@@ -54,7 +54,7 @@ export const Prices = () => {
     <section id="pricing" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
             Simple Pricing
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -64,17 +64,17 @@ export const Prices = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <Card key={index} className={`relative border-border bg-card hover:shadow-glow transition-all duration-300 ${plan.popular ? 'ring-2 ring-primary scale-105' : 'hover:scale-105'}`}>
+            <Card key={index} className={`relative border-border bg-card hover:shadow-glow transition-smooth ${plan.popular ? 'ring-2 ring-primary scale-105' : 'hover-lift'}`}>
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="gradient-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
                 </div>
               )}
               
               <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
+                <CardTitle className="text-2xl font-heading font-bold">{plan.name}</CardTitle>
                 <div className="mt-4">
                   <span className="text-4xl font-bold text-foreground">{plan.price}</span>
                   <span className="text-muted-foreground">{plan.period}</span>
@@ -95,7 +95,7 @@ export const Prices = () => {
                 </ul>
                 
                 <Button 
-                  className={`w-full ${plan.popular ? 'bg-gradient-primary text-primary-foreground hover:shadow-hero' : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'} transition-all duration-300`}
+                  className={`w-full ${plan.popular ? 'gradient-primary text-primary-foreground hover:shadow-glow' : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'} transition-smooth`}
                   size="lg"
                 >
                   Get Started

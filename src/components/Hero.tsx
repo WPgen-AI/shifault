@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden hero-section">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-subtle"></div>
+      <div className="absolute inset-0 gradient-hero"></div>
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -14,9 +14,9 @@ export const Hero = () => {
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
+          <h1 className="text-5xl md:text-7xl font-heading font-bold text-foreground leading-tight">
             Build Websites with{" "}
-            <span className="bg-gradient-hero bg-clip-text text-transparent">
+            <span className="text-gradient">
               No-Code
             </span>
           </h1>
@@ -28,7 +28,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
             <Button 
               size="lg" 
-              className="bg-gradient-primary text-primary-foreground hover:shadow-hero transition-all duration-500 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
+              className="gradient-primary text-primary-foreground hover:shadow-glow transition-smooth hover:scale-105 px-8 py-4 text-lg font-semibold hover-lift"
             >
               Start Building Now
             </Button>

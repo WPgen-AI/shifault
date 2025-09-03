@@ -6,8 +6,8 @@ export const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg"></div>
-              <h3 className="text-xl font-bold">NoCode Builder</h3>
+              <div className="w-8 h-8 gradient-primary rounded-lg"></div>
+              <h3 className="text-xl font-heading font-bold">NoCode Builder</h3>
             </div>
             <p className="text-background/80 leading-relaxed">
               Build professional websites without code. Fast, easy, and powerful.
@@ -27,7 +27,7 @@ export const Footer = () => {
 
           {/* Product */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Product</h4>
+            <h4 className="font-heading font-semibold text-lg">Product</h4>
             <ul className="space-y-2">
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Features</a></li>
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Templates</a></li>
@@ -38,7 +38,7 @@ export const Footer = () => {
 
           {/* Resources */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Resources</h4>
+            <h4 className="font-heading font-semibold text-lg">Resources</h4>
             <ul className="space-y-2">
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Documentation</a></li>
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Blog</a></li>
@@ -49,7 +49,7 @@ export const Footer = () => {
 
           {/* Company */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Company</h4>
+            <h4 className="font-heading font-semibold text-lg">Company</h4>
             <ul className="space-y-2">
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">About Us</a></li>
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Contact</a></li>

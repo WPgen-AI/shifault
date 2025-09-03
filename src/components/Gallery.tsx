@@ -36,7 +36,7 @@ export const Gallery = () => {
     <section id="gallery" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
             Website Gallery
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -47,9 +47,9 @@ export const Gallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {galleryItems.map((item, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg shadow-soft hover:shadow-glow transition-all duration-300">
-                <div className={`aspect-video ${item.image} opacity-90 group-hover:scale-110 transition-transform duration-300`}></div>
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
+              <div className="relative overflow-hidden rounded-lg shadow-card hover:shadow-glow transition-smooth">
+                <div className={`aspect-video ${item.image} opacity-90 group-hover:scale-110 transition-smooth`}></div>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-smooth"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <p className="text-sm font-medium opacity-80">{item.category}</p>
                   <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -60,7 +60,7 @@ export const Gallery = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-gradient-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105">
+          <button className="gradient-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-glow transition-smooth hover-lift">
             View All Templates
           </button>
         </div>

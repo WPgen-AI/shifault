@@ -32,7 +32,7 @@ export const Blog = () => {
     <section id="blog" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
             Latest from Our Blog
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -42,7 +42,7 @@ export const Blog = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {blogPosts.map((post, index) => (
-            <Card key={index} className="border-border bg-card hover:shadow-soft transition-all duration-300 hover:scale-105 cursor-pointer">
+            <Card key={index} className="border-border bg-card hover:shadow-card transition-smooth hover-lift cursor-pointer">
               <CardHeader className="space-y-4">
                 <div className="flex items-center justify-between text-sm text-muted-foreground">
                   <span className="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs font-medium">
@@ -50,7 +50,7 @@ export const Blog = () => {
                   </span>
                   <span>{post.readTime}</span>
                 </div>
-                <CardTitle className="text-xl font-semibold leading-tight hover:text-primary transition-colors">
+                <CardTitle className="text-xl font-heading font-semibold leading-tight hover:text-primary transition-smooth">
                   {post.title}
                 </CardTitle>
               </CardHeader>
@@ -70,7 +70,7 @@ export const Blog = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-gradient-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105">
+          <button className="gradient-primary text-primary-foreground px-8 py-3 rounded-lg hover:shadow-glow transition-smooth hover-lift">
             Read All Articles
           </button>
         </div>

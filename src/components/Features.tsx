@@ -38,7 +38,7 @@ export const Features = () => {
     <section id="features" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
             Powerful Features
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -48,10 +48,10 @@ export const Features = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="border-border bg-card hover:shadow-soft transition-all duration-300 hover:scale-105">
+            <Card key={index} className="border-border bg-card hover:shadow-glow transition-smooth hover-lift">
               <CardHeader className="text-center pb-4">
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <CardTitle className="text-xl font-semibold">{feature.title}</CardTitle>
+                <CardTitle className="text-xl font-heading font-semibold">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-muted-foreground leading-relaxed">
