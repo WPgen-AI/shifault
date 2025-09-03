@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Wand2 } from "lucide-react";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,9 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 gradient-primary rounded-lg elevation"></div>
+            <div className="w-8 h-8 gradient-primary rounded-lg elevation flex items-center justify-center">
+              <Wand2 className="w-4 h-4 text-white" />
+            </div>
             <h1 className="text-xl font-heading font-bold text-foreground">Project Name</h1>
           </div>
           
