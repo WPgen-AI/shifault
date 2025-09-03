@@ -37,7 +37,7 @@ interface AuthPageProps {
 // --- SUB-COMPONENTS ---
 
 const GlassInputWrapper = ({ children }: { children: React.ReactNode }) => (
-  <div className="rounded-2xl border border-border bg-foreground/5 backdrop-blur-sm transition-colors focus-within:border-violet-400/70 focus-within:bg-violet-500/10">
+  <div className="relative rounded-xl border border-border/40 bg-background/60 backdrop-blur-sm transition-all duration-300 focus-within:border-primary/30 focus-within:bg-background/80 focus-within:shadow-[0_0_0_4px_hsl(var(--primary)/0.1)] hover:border-border/60">
     {children}
   </div>
 );
@@ -64,13 +64,17 @@ const TabButton = ({
 }) => (
   <button
     onClick={onClick}
-    className={`flex-1 py-3 px-4 text-sm font-medium rounded-xl transition-all duration-300 ${
+    className={`relative flex-1 py-3 px-6 text-sm font-medium rounded-lg transition-all duration-300 transform ${
       active 
-        ? 'gradient-primary text-primary-foreground shadow-glow' 
-        : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+        ? 'text-primary-foreground bg-background shadow-[0_8px_16px_hsl(var(--primary)/0.2)] scale-105 z-10' 
+        : 'text-muted-foreground hover:text-foreground hover:bg-background/50 hover:scale-102'
     }`}
+    style={active ? { background: 'var(--gradient-primary)' } : {}}
   >
     {children}
+    {active && (
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/20 to-transparent opacity-50" />
+    )}
   </button>
 );
 
@@ -126,8 +130,8 @@ export const AuthPage: React.FC<AuthPageProps> = ({
             </p>
 
             {/* Tab Navigation */}
-            <div className="animate-element animate-delay-250 flex gap-2 p-1 bg-secondary/50 rounded-xl">
-              <TabButton 
+            <div className="animate-element animate-delay-250 flex gap-1 p-2 bg-muted/30 backdrop-blur-sm rounded-xl border border-border/40 shadow-inner">
+              <TabButton
                 active={isSignIn} 
                 onClick={() => setAuthMode('signin')}
               >
@@ -145,13 +149,13 @@ export const AuthPage: React.FC<AuthPageProps> = ({
               {/* Name field - only for sign up */}
               {isSignUp && (
                 <div className="animate-element animate-delay-300">
-                  <label className="text-sm font-medium text-muted-foreground">Full Name</label>
+                  <label className="block text-sm font-medium text-muted-foreground mb-2">Full Name</label>
                   <GlassInputWrapper>
                     <input 
                       name="fullName" 
                       type="text" 
                       placeholder="Enter your full name" 
-                      className="w-full bg-transparent text-sm p-4 rounded-2xl focus:outline-none" 
+                      className="w-full bg-transparent text-sm px-4 py-3.5 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
                       required
                     />
                   </GlassInputWrapper>
@@ -160,13 +164,13 @@ export const AuthPage: React.FC<AuthPageProps> = ({
 
               {/* Email field */}
               <div className="animate-element animate-delay-300">
-                <label className="text-sm font-medium text-muted-foreground">Email Address</label>
+                <label className="block text-sm font-medium text-muted-foreground mb-2">Email Address</label>
                 <GlassInputWrapper>
                   <input 
                     name="email" 
                     type="email" 
                     placeholder="Enter your email address" 
-                    className="w-full bg-transparent text-sm p-4 rounded-2xl focus:outline-none" 
+                    className="w-full bg-transparent text-sm px-4 py-3.5 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
                     required
                   />
                 </GlassInputWrapper>
@@ -174,25 +178,25 @@ export const AuthPage: React.FC<AuthPageProps> = ({
 
               {/* Password field */}
               <div className="animate-element animate-delay-400">
-                <label className="text-sm font-medium text-muted-foreground">Password</label>
+                <label className="block text-sm font-medium text-muted-foreground mb-2">Password</label>
                 <GlassInputWrapper>
                   <div className="relative">
                     <input 
                       name="password" 
                       type={showPassword ? 'text' : 'password'} 
                       placeholder={isSignIn ? "Enter your password" : "Create a password"}
-                      className="w-full bg-transparent text-sm p-4 pr-12 rounded-2xl focus:outline-none" 
+                      className="w-full bg-transparent text-sm px-4 py-3.5 pr-12 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
                       required
                     />
                     <button 
                       type="button" 
                       onClick={() => setShowPassword(!showPassword)} 
-                      className="absolute inset-y-0 right-3 flex items-center"
+                      className="absolute inset-y-0 right-3 flex items-center text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {showPassword ? (
-                        <EyeOff className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
+                        <EyeOff className="w-4 h-4" />
                       ) : (
-                        <Eye className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
+                        <Eye className="w-4 h-4" />
                       )}
                     </button>
                   </div>
@@ -202,25 +206,25 @@ export const AuthPage: React.FC<AuthPageProps> = ({
               {/* Confirm Password field - only for sign up */}
               {isSignUp && (
                 <div className="animate-element animate-delay-450">
-                  <label className="text-sm font-medium text-muted-foreground">Confirm Password</label>
+                  <label className="block text-sm font-medium text-muted-foreground mb-2">Confirm Password</label>
                   <GlassInputWrapper>
                     <div className="relative">
                       <input 
                         name="confirmPassword" 
                         type={showConfirmPassword ? 'text' : 'password'} 
                         placeholder="Confirm your password" 
-                        className="w-full bg-transparent text-sm p-4 pr-12 rounded-2xl focus:outline-none" 
+                        className="w-full bg-transparent text-sm px-4 py-3.5 pr-12 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
                         required
                       />
                       <button 
                         type="button" 
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)} 
-                        className="absolute inset-y-0 right-3 flex items-center"
+                        className="absolute inset-y-0 right-3 flex items-center text-muted-foreground hover:text-foreground transition-colors"
                       >
                         {showConfirmPassword ? (
-                          <EyeOff className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
+                          <EyeOff className="w-4 h-4" />
                         ) : (
-                          <Eye className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
+                          <Eye className="w-4 h-4" />
                         )}
                       </button>
                     </div>
@@ -264,23 +268,26 @@ export const AuthPage: React.FC<AuthPageProps> = ({
 
               <button 
                 type="submit" 
-                className="animate-element animate-delay-600 w-full rounded-2xl bg-primary py-4 font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="animate-element animate-delay-600 w-full rounded-xl py-3.5 font-medium text-primary-foreground transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_8px_25px_hsl(var(--primary)/0.25)] active:scale-[0.98]"
+                style={{ background: 'var(--gradient-primary)' }}
               >
                 {isSignIn ? 'Sign In' : 'Create Account'}
               </button>
             </form>
 
             <div className="animate-element animate-delay-700 relative flex items-center justify-center">
-              <span className="w-full border-t border-border"></span>
-              <span className="px-4 text-sm text-muted-foreground bg-background absolute">Or continue with</span>
+              <span className="w-full border-t border-border/40"></span>
+              <span className="px-6 text-sm text-muted-foreground bg-background/90 backdrop-blur-sm rounded-full py-1 border border-border/20">
+                Or continue with
+              </span>
             </div>
 
             <button 
               onClick={handleGoogleAuth} 
-              className="animate-element animate-delay-800 w-full flex items-center justify-center gap-3 border border-border rounded-2xl py-4 hover:bg-secondary transition-colors"
+              className="animate-element animate-delay-800 w-full flex items-center justify-center gap-3 border border-border/40 rounded-xl py-3.5 bg-background/50 backdrop-blur-sm hover:bg-background/80 hover:border-border/60 hover:shadow-[0_4px_12px_hsl(var(--border)/0.15)] transition-all duration-300 transform hover:scale-[1.01]"
             >
                 <GoogleIcon />
-                Continue with Google
+                <span className="font-medium">Continue with Google</span>
             </button>
 
             {/* Switch mode link */}
