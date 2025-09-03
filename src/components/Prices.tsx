@@ -229,7 +229,7 @@ export const Prices = () => {
                       variant: plan.isPopular ? "default" : "outline",
                     }),
                     plan.isPopular && "gradient-primary text-primary-foreground hover:bg-none hover:opacity-90",
-                    !plan.isPopular && "hover:border-[hsl(25_95%_53%)] hover:text-[hsl(25_95%_53%)] hover:bg-[hsl(25_85%_65%)]",
+                    !plan.isPopular && "hover:border-[hsl(25_95%_53%)] hover:text-white hover:bg-[hsl(25_85%_65%)]",
                     "group relative w-full gap-2 overflow-hidden text-base font-semibold tracking-tight mb-4",
                     "transform-gpu transition-all duration-300 ease-out"
                   )}
