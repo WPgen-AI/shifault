@@ -106,7 +106,7 @@ export const Gallery = () => {
   }, [carouselApi]);
 
   return (
-    <section id="gallery" className="py-20 bg-background">
+    <section id="gallery" className="py-20 bg-muted/30 dark:bg-transparent">
       {/* Upper section - normal container width */}
       <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
         <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16">
