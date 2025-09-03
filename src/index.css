@@ -88,7 +88,7 @@
     --brand-scarlet-primary: 0 100% 68%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0 0% 11%), hsl(214 75% 39%));
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(15 88% 45%));
     --gradient-hero: linear-gradient(135deg, hsl(45 40% 98%), hsl(42 38% 95%));
     --gradient-accent: linear-gradient(135deg, hsl(216 73% 91%), hsl(214 75% 39%));
     --gradient-surface: linear-gradient(135deg, hsl(45 40% 98%), hsl(42 38% 95%));
@@ -192,7 +192,7 @@
     --brand-scarlet-primary: 0 93% 54%;
 
     /* Dark Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(45 40% 98%), hsl(217 100% 72%));
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(15 88% 45%));
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 11%), hsl(60 3% 15%));
     --gradient-accent: linear-gradient(135deg, hsl(217 33% 22%), hsl(217 100% 72%));
     --gradient-surface: linear-gradient(135deg, hsl(0 0% 11%), hsl(0 0% 5%));
