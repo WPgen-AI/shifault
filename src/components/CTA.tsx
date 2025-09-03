@@ -9,7 +9,7 @@ export const CTA = () => {
     <section className="py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent-primary/5 rounded-3xl"></div>
+        <div className="absolute inset-0 rounded-3xl"></div>
         <div className="absolute top-10 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl"></div>
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-accent-primary/10 rounded-full blur-xl"></div>
         
