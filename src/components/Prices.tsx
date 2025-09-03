@@ -228,9 +228,10 @@ export const Prices = () => {
                     buttonVariants({
                       variant: plan.isPopular ? "default" : "outline",
                     }),
-                    plan.isPopular && "gradient-primary text-primary-foreground",
+                    plan.isPopular && "gradient-primary text-primary-foreground hover:bg-none hover:opacity-90",
+                    !plan.isPopular && "hover:border-[hsl(25_95%_53%)] hover:text-[hsl(25_95%_53%)]",
                     "group relative w-full gap-2 overflow-hidden text-base font-semibold tracking-tight mb-4",
-                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-[hsl(25_95%_53%)] hover:ring-offset-1"
+                    "transform-gpu transition-all duration-300 ease-out"
                   )}
                 >
                   {plan.buttonText}
