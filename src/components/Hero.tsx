@@ -1,59 +1,124 @@
+"use client";
+
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { renderCanvas, ShineBorder, TypeWriter } from "@/components/ui/hero-design";
+import { Plus } from "lucide-react";
 
 export const Hero = () => {
+  const talkAbout = [
+    "No-Code Websites",
+    "Modern Design", 
+    "Professional Solutions",
+    "Creative Development",
+    "Digital Innovation",
+    "UI/UX Excellence",
+    "Web Solutions",
+  ];
+
+  useEffect(() => {
+    renderCanvas();
+  }, []);
+
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden hero-section">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 gradient-hero"></div>
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold text-foreground leading-tight">
-            Build Websites with{" "}
-            <span className="text-gradient">
-              No-Code
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Design and publish professional websites in minutes without writing a single line of code.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <Button 
-              size="lg" 
-              className="gradient-primary text-primary-foreground hover:shadow-glow transition-smooth hover:scale-105 px-8 py-4 text-lg font-semibold hover-lift"
-            >
-              Start Building Now
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-border hover:bg-muted px-8 py-4 text-lg"
-            >
-              Watch Demo
-            </Button>
+    <main className="overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center">
+        {/* Grid Background Pattern */}
+        <div className="absolute inset-0 max-md:hidden top-[400px] -z-10 h-[400px] w-full bg-transparent bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+        
+        <div className="flex flex-col items-center justify-center px-6 text-center relative z-10">
+          {/* Introduction Badge */}
+          <div className="mb-6 mt-10 sm:justify-center md:mb-4 md:mt-40">
+            <div className="relative flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
+              Introducing No-Code Builder.
+              <span className="ml-1 flex items-center font-semibold text-foreground">
+                Explore <span aria-hidden="true"> →</span>
+              </span>
+            </div>
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="text-sm text-muted-foreground mb-4">
-              Trusted by thousands of creators worldwide
+          {/* Main Content */}
+          <div className="mx-auto max-w-5xl">
+            <div className="relative mx-auto h-full bg-background border border-border rounded-lg py-12 p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)]">
+              {/* Corner Plus Icons */}
+              <Plus
+                strokeWidth={4}
+                className="text-accent-primary absolute -left-5 -top-5 h-10 w-10"
+              />
+              <Plus
+                strokeWidth={4}
+                className="text-accent-primary absolute -bottom-5 -left-5 h-10 w-10"
+              />
+              <Plus
+                strokeWidth={4}
+                className="text-accent-primary absolute -right-5 -top-5 h-10 w-10"
+              />
+              <Plus
+                strokeWidth={4}
+                className="text-accent-primary absolute -bottom-5 -right-5 h-10 w-10"
+              />
+              
+              {/* Main Heading */}
+              <h1 className="flex flex-col text-center text-5xl font-heading font-bold leading-none tracking-tight md:flex-col md:text-8xl lg:flex-row lg:text-8xl text-foreground">
+                <span>
+                  Your complete platform for{" "}
+                  <span className="text-gradient">No-Code.</span>
+                </span>
+              </h1>
+              
+              {/* Status Indicator */}
+              <div className="flex items-center mt-4 justify-center gap-1">
+                <span className="relative flex h-3 w-3 items-center justify-center">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success-primary opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-success-primary"></span>
+                </span>
+                <p className="text-xs text-success-primary">Available Now</p>
+              </div>
+            </div>
+
+            {/* Description */}
+            <h2 className="mt-8 text-2xl md:text-2xl text-foreground">
+              Welcome to the future of web development!{" "}
+              <span className="text-accent-primary font-bold">Build faster </span>
+            </h2>
+
+            <p className="text-muted-foreground py-4">
+              I craft beautiful, modern websites without code, and provide design resources
+              to empower others. Expert in creating solutions like{" "}
+              <span className="text-accent-primary font-semibold">
+                <TypeWriter strings={talkAbout} />
+              </span>.
             </p>
-            <div className="flex justify-center items-center space-x-8 opacity-60">
-              <div className="w-16 h-8 bg-muted rounded"></div>
-              <div className="w-16 h-8 bg-muted rounded"></div>
-              <div className="w-16 h-8 bg-muted rounded"></div>
-              <div className="w-16 h-8 bg-muted rounded"></div>
+
+            {/* Call to Action Buttons */}
+            <div className="flex items-center justify-center gap-2 mt-8">
+              <ShineBorder
+                borderWidth={2}
+                className="border cursor-pointer h-auto w-auto p-2 bg-background/50 backdrop-blur-md"
+                color={["hsl(var(--accent-primary))", "hsl(var(--brand-sapphire-primary))", "hsl(var(--brand-twilight-primary))"]}
+              >
+                <Button className="w-full rounded-xl gradient-primary text-primary-foreground hover:shadow-glow transition-smooth">
+                  Start Building Now
+                </Button>
+              </ShineBorder>
+              
+              <Button 
+                className="rounded-xl" 
+                variant="outline"
+                size="lg"
+              >
+                Watch Demo
+              </Button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        {/* Interactive Canvas */}
+        <canvas
+          className="pointer-events-none absolute inset-0 mx-auto"
+          id="canvas"
+        ></canvas>
+      </section>
+    </main>
   );
 };
