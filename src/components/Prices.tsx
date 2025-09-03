@@ -230,7 +230,7 @@ export const Prices = () => {
                     }),
                     plan.isPopular && "gradient-primary text-primary-foreground",
                     "group relative w-full gap-2 overflow-hidden text-base font-semibold tracking-tight mb-4",
-                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-1"
+                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-[hsl(25_95%_53%)] hover:ring-offset-1"
                   )}
                 >
                   {plan.buttonText}
