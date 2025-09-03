@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { SectionBadge } from "@/components/SectionBadge";
+import { MessageCircle } from "lucide-react";
 
 const testimonials = [
   {
@@ -123,7 +124,7 @@ export const Testimonials = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-3xl mx-auto text-center mb-16"
         >
-          <SectionBadge>
+          <SectionBadge icon={<MessageCircle className="w-4 h-4" />}>
             Testimonials
           </SectionBadge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-4">

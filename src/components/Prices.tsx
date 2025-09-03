@@ -6,7 +6,7 @@ import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Check, Star } from "lucide-react";
+import { Check, Star, CreditCard } from "lucide-react";
 // import Link from "next/link";
 import { useState, useRef } from "react";
 import confetti from "canvas-confetti";
@@ -122,7 +122,7 @@ export const Prices = () => {
     <section className="py-20 bg-muted/30 dark:bg-transparent">
       <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
         <div className="text-center space-y-4 mb-12">
-          <SectionBadge>
+          <SectionBadge icon={<CreditCard className="w-4 h-4" />}>
             Pricing Plans
           </SectionBadge>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground">

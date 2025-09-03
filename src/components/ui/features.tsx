@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card'
-import { Shield, Users } from 'lucide-react'
+import { Shield, Users, Zap } from 'lucide-react'
 import { SectionBadge } from '@/components/SectionBadge'
 
 export function Features() {
@@ -7,7 +7,7 @@ export function Features() {
         <section className="bg-muted/30 py-16 md:py-32 dark:bg-transparent">
             <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
                 <div className="text-center mb-16">
-                    <SectionBadge>
+                    <SectionBadge icon={<Zap className="w-4 h-4" />}>
                         Features
                     </SectionBadge>
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">

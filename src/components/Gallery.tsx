@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Grid3X3 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -112,7 +112,7 @@ export const Gallery = () => {
       <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
         <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16">
           <div className="max-w-2xl">
-            <SectionBadge>
+            <SectionBadge icon={<Grid3X3 className="w-4 h-4" />}>
               Our Services
             </SectionBadge>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
