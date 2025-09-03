@@ -45,7 +45,7 @@ export const Hero = () => {
 
           {/* Main Content */}
           <div className="mx-auto max-w-5xl">
-            <div className="relative mx-auto h-full bg-card/50 backdrop-blur-sm border border-accent-primary rounded-lg py-12 p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)]">
+            <div className="relative mx-auto h-full bg-card/50 backdrop-blur-sm border border-[hsl(25_95%_53%)] rounded-lg py-12 p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)]">
               {/* Corner Plus Icons */}
               <Plus
                 strokeWidth={4}
