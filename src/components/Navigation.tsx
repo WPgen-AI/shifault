@@ -20,7 +20,7 @@ export const Navigation = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-6">
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
               Features
             </a>
@@ -39,7 +39,7 @@ export const Navigation = () => {
           </nav>
 
           {/* Desktop Buttons */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-3">
             <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
               Sign In
             </Button>
@@ -48,10 +48,10 @@ export const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile/Tablet Hamburger Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? (
@@ -64,7 +64,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
+          <div className="lg:hidden mt-4 pb-4 border-t border-border">
             <nav className="flex flex-col space-y-4 pt-4">
               <a 
                 href="#features" 
