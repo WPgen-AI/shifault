@@ -195,7 +195,7 @@ export const Gallery = () => {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="absolute bottom-4 right-4 gradient-primary text-primary-foreground hover:-rotate-45 hover:shadow-glow hover:scale-105 transition-all duration-500 rounded-full border-0"
+                        className="absolute bottom-4 right-4 gradient-primary text-primary-foreground hover:text-white hover:-rotate-45 hover:shadow-glow hover:scale-105 transition-all duration-500 rounded-full border-0"
                       >
                         <ArrowRight className="size-4" />
                       </Button>
