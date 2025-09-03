@@ -162,7 +162,7 @@ function render() {
     // @ts-ignore
     ctx.globalCompositeOperation = "lighter";
     // @ts-ignore
-    ctx.strokeStyle = "hsla(" + (214 + Math.round(f.update()) * 0.1) + ",75%,50%,0.2)";
+    ctx.strokeStyle = "hsla(" + (25 + Math.round(f.update()) * 0.1) + ",95%,53%,0.2)";
     // @ts-ignore
     ctx.lineWidth = 8;
     for (var e, t = 0; t < E.trails; t++) {
