@@ -94,7 +94,7 @@ export const Hero = () => {
 
             <p className="text-muted-foreground py-4">
               Expert in creating solutions like{" "}
-              <span className="text-accent-primary font-semibold">
+              <span className="text-gradient font-semibold">
                 <TypeWriter strings={talkAbout} />
               </span>.
             </p>
