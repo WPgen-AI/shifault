@@ -4,7 +4,7 @@ import { SectionBadge } from '@/components/SectionBadge'
 
 export function Features() {
     return (
-        <section className="bg-muted/30 py-16 md:py-32 dark:bg-transparent">
+        <section className="bg-muted/30 py-8 md:py-16 dark:bg-transparent">
             <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
                 <div className="text-center mb-16">
                     <SectionBadge icon={<Zap className="w-4 h-4" />}>
