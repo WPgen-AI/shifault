@@ -173,8 +173,10 @@ export const Prices = () => {
                 opacity: { duration: 0.5 },
               }}
               className={cn(
-                "rounded-2xl border p-6 bg-card text-center relative",
-                plan.isPopular ? "border-primary border-2 shadow-glow" : "border-border",
+                "rounded-2xl border p-6 text-center relative",
+                plan.isPopular 
+                  ? "border-primary border-2 shadow-glow gradient-primary text-primary-foreground" 
+                  : "border-border bg-card",
                 "flex flex-col",
                 !plan.isPopular && "mt-5",
                 index === 0 || index === 2
@@ -194,48 +196,73 @@ export const Prices = () => {
               )}
               
               <div className="flex-1 flex flex-col">
-                <p className="text-base font-semibold text-muted-foreground mb-6">
+                <p className={cn(
+                  "text-base font-semibold mb-6",
+                  plan.isPopular ? "text-primary-foreground/80" : "text-muted-foreground"
+                )}>
                   {plan.name}
                 </p>
                 
                 <div className="mb-6 flex items-center justify-center gap-x-2">
-                  <span className="text-5xl font-bold tracking-tight text-foreground">
+                  <span className={cn(
+                    "text-5xl font-bold tracking-tight",
+                    plan.isPopular ? "text-primary-foreground" : "text-foreground"
+                  )}>
                     ${isMonthly ? plan.price : plan.yearlyPrice}
                   </span>
-                  <span className="text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
+                  <span className={cn(
+                    "text-sm font-semibold leading-6 tracking-wide",
+                    plan.isPopular ? "text-primary-foreground/80" : "text-muted-foreground"
+                  )}>
                     / {plan.period}
                   </span>
                 </div>
 
-                <p className="text-xs leading-5 text-muted-foreground mb-6">
+                <p className={cn(
+                  "text-xs leading-5 mb-6",
+                  plan.isPopular ? "text-primary-foreground/70" : "text-muted-foreground"
+                )}>
                   {isMonthly ? "billed monthly" : "billed annually"}
                 </p>
 
                 <ul className="mb-6 gap-3 flex flex-col text-left">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-sm text-foreground">{feature}</span>
+                      <Check className={cn(
+                        "h-4 w-4 mt-1 flex-shrink-0",
+                        plan.isPopular ? "text-primary-foreground" : "text-primary"
+                      )} />
+                      <span className={cn(
+                        "text-sm",
+                        plan.isPopular ? "text-primary-foreground" : "text-foreground"
+                      )}>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <hr className="w-full my-6 border-border" />
+                <hr className={cn(
+                  "w-full my-6",
+                  plan.isPopular ? "border-primary-foreground/20" : "border-border"
+                )} />
 
                 <a
                   href={plan.href}
                   className={cn(
                     buttonVariants({
-                      variant: plan.isPopular ? "default" : "outline",
+                      variant: plan.isPopular ? "secondary" : "outline",
                     }),
                     "group relative w-full gap-2 overflow-hidden text-base font-semibold tracking-tight mb-4",
-                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-1"
+                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-1",
+                    plan.isPopular && "bg-background text-foreground hover:bg-background/90"
                   )}
                 >
                   {plan.buttonText}
                 </a>
                 
-                <p className="text-xs leading-5 text-muted-foreground">
+                <p className={cn(
+                  "text-xs leading-5",
+                  plan.isPopular ? "text-primary-foreground/70" : "text-muted-foreground"
+                )}>
                   {plan.description}
                 </p>
               </div>
