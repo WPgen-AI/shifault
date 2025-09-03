@@ -111,7 +111,7 @@ export const Hero = () => {
               </ShineBorder>
               
               <Button 
-                className="rounded-xl" 
+                className="rounded-xl hover:border-[hsl(25_95%_53%)] hover:text-white hover:bg-[hsl(25_85%_65%)] transform-gpu transition-all duration-300 ease-out" 
                 variant="outline"
                 size="lg"
               >
