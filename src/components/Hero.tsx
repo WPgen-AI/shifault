@@ -10,13 +10,13 @@ import { Plus } from "lucide-react";
 
 export const Hero = () => {
   const talkAbout = [
-    "No-Code Websites",
-    "Modern Design", 
-    "Professional Solutions",
-    "Creative Development",
+    "Modern Web Apps",
+    "Business Solutions", 
+    "Digital Products",
+    "Creative Projects",
     "Digital Innovation",
-    "UI/UX Excellence",
-    "Web Solutions",
+    "User Experience",
+    "Professional Sites",
   ];
 
   const avatarUrls = [
@@ -40,7 +40,7 @@ export const Hero = () => {
           {/* Introduction Badge */}
           <div className="mb-6 mt-4 sm:justify-center md:mb-4 md:mt-8">
             <div className="relative flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
-              Introducing No-Code Builder.
+              Introducing Your Platform.
               <span className="ml-1 flex items-center font-semibold text-foreground">
                 Explore <span aria-hidden="true"> →</span>
               </span>
@@ -72,7 +72,7 @@ export const Hero = () => {
               <h1 className="flex flex-col text-center text-5xl font-heading font-bold leading-none tracking-tight md:flex-col md:text-8xl lg:flex-row lg:text-8xl text-foreground">
                 <span>
                   Your complete platform for{" "}
-                  <span className="text-gradient">No-Code.</span>
+                  <span className="text-gradient">Success.</span>
                 </span>
               </h1>
               
@@ -89,7 +89,7 @@ export const Hero = () => {
             {/* Description */}
             <h2 className="mt-8 text-2xl md:text-2xl text-foreground">
               Welcome to the future of web development!{" "}
-              <span className="text-accent-primary font-bold">Build faster </span>
+              <span className="text-accent-primary font-bold">Build anything </span>
             </h2>
 
             <p className="text-muted-foreground py-4">
@@ -109,7 +109,7 @@ export const Hero = () => {
               >
                 <Link to="/login">
                   <Button className="w-full rounded-xl gradient-primary text-primary-foreground hover:shadow-glow hover:scale-105 hover:opacity-90 transition-all duration-300 ease-out">
-                    Start Building Now
+                    Get Started Now
                   </Button>
                 </Link>
               </ShineBorder>

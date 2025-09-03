@@ -28,12 +28,12 @@ export const CTA = () => {
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
             Start Building Your{" "}
-            <span className="text-gradient">Dream Website</span>{" "}
+            <span className="text-gradient">Next Project</span>{" "}
             Today
           </h2>
 
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of users who are already creating amazing websites with our no-code platform. 
+            Join thousands of users who are already creating amazing projects with our platform. 
             No credit card required to get started.
           </p>
 
@@ -44,7 +44,7 @@ export const CTA = () => {
               className="w-full sm:w-auto gradient-primary text-primary-foreground hover:shadow-glow transition-smooth group"
             >
               <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-              Start Building Free
+              Get Started Free
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             
@@ -71,7 +71,7 @@ export const CTA = () => {
               </div>
               <h3 className="font-semibold mb-2">Lightning Fast</h3>
               <p className="text-sm text-muted-foreground">
-                Build and deploy your website in minutes, not weeks.
+                Build and deploy your projects in minutes, not weeks.
               </p>
             </motion.div>
 
