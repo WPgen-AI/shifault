@@ -49,19 +49,19 @@ export const Hero = () => {
               {/* Corner Plus Icons */}
               <Plus
                 strokeWidth={4}
-                className="text-accent-primary absolute -left-5 -top-5 h-10 w-10"
+                className="text-[hsl(25_95%_53%)] absolute -left-5 -top-5 h-10 w-10"
               />
               <Plus
                 strokeWidth={4}
-                className="text-accent-primary absolute -bottom-5 -left-5 h-10 w-10"
+                className="text-[hsl(25_95%_53%)] absolute -bottom-5 -left-5 h-10 w-10"
               />
               <Plus
                 strokeWidth={4}
-                className="text-accent-primary absolute -right-5 -top-5 h-10 w-10"
+                className="text-[hsl(25_95%_53%)] absolute -right-5 -top-5 h-10 w-10"
               />
               <Plus
                 strokeWidth={4}
-                className="text-accent-primary absolute -bottom-5 -right-5 h-10 w-10"
+                className="text-[hsl(25_95%_53%)] absolute -bottom-5 -right-5 h-10 w-10"
               />
               
               {/* Main Heading */}
