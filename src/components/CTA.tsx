@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles, Zap } from "lucide-react";
 
 export const CTA = () => {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-20 bg-muted/30 dark:bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         {/* Background Effects */}
         <div className="absolute inset-0 rounded-3xl"></div>
