@@ -185,7 +185,7 @@ export const Prices = () => {
               )}
             >
               {plan.isPopular && (
-                <div className="absolute top-0 right-0 bg-primary py-1 px-3 rounded-bl-xl rounded-tr-xl flex items-center">
+                <div className="absolute top-0 right-0 gradient-primary py-1 px-3 rounded-bl-xl rounded-tr-xl flex items-center">
                   <Star className="text-primary-foreground h-4 w-4 fill-current" />
                   <span className="text-primary-foreground ml-1 font-semibold text-sm">
                     Popular
