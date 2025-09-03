@@ -105,7 +105,7 @@ export const Hero = () => {
                 borderRadius={12}
                 borderWidth={2}
                 className="border cursor-pointer h-auto w-auto p-2 bg-background/50 backdrop-blur-md"
-                color={["hsl(var(--accent-primary))", "hsl(var(--brand-sapphire-primary))", "hsl(var(--brand-twilight-primary))"]}
+                color={["hsl(25 95% 53%)", "hsl(15 88% 45%)"]}
               >
                 <Link to="/login">
                   <Button className="w-full rounded-xl gradient-primary text-primary-foreground hover:shadow-glow hover:scale-105 hover:opacity-90 transition-all duration-300 ease-out">
