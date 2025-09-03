@@ -102,6 +102,7 @@ export const Hero = () => {
                 borderWidth={2}
                 className="border cursor-pointer h-auto w-auto p-2 bg-background/50 backdrop-blur-md"
                 color={["hsl(25 95% 53%)", "hsl(15 88% 45%)"]}
+                <Link to="/login">Get Started Now</Link>
               >
                 <Button 
                   asChild
