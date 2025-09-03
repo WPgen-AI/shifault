@@ -275,7 +275,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
               </button>
             </form>
 
-            <div className="animate-element animate-delay-700 relative flex items-center justify-center my-4">
+            <div className="animate-element animate-delay-700 relative flex items-center justify-center my-2">
               <span className="absolute inset-0 flex items-center">
                 <span className="w-full border-t border-border/40"></span>
               </span>
