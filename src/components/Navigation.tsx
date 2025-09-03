@@ -24,19 +24,19 @@ export const Navigation = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
-            <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#features" className="text-lg text-foreground/90 hover:text-gradient transition-all duration-300">
               Features
             </a>
-            <a href="#gallery" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#gallery" className="text-lg text-foreground/90 hover:text-gradient transition-all duration-300">
               Gallery
             </a>
-            <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#pricing" className="text-lg text-foreground/90 hover:text-gradient transition-all duration-300">
               Pricing
             </a>
-            <a href="#blog" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#blog" className="text-lg text-foreground/90 hover:text-gradient transition-all duration-300">
               Blog
             </a>
-            <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#faq" className="text-lg text-foreground/90 hover:text-gradient transition-all duration-300">
               FAQ
             </a>
           </nav>
@@ -73,35 +73,35 @@ export const Navigation = () => {
             <nav className="flex flex-col space-y-4 pt-4">
               <a 
                 href="#features" 
-                className="text-muted-foreground hover:text-foreground transition-colors py-2"
+                className="text-lg text-foreground/90 hover:text-gradient transition-all duration-300 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Features
               </a>
               <a 
                 href="#gallery" 
-                className="text-muted-foreground hover:text-foreground transition-colors py-2"
+                className="text-lg text-foreground/90 hover:text-gradient transition-all duration-300 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Gallery
               </a>
               <a 
                 href="#pricing" 
-                className="text-muted-foreground hover:text-foreground transition-colors py-2"
+                className="text-lg text-foreground/90 hover:text-gradient transition-all duration-300 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Pricing
               </a>
               <a 
                 href="#blog" 
-                className="text-muted-foreground hover:text-foreground transition-colors py-2"
+                className="text-lg text-foreground/90 hover:text-gradient transition-all duration-300 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Blog
               </a>
               <a 
                 href="#faq" 
-                className="text-muted-foreground hover:text-foreground transition-colors py-2"
+                className="text-lg text-foreground/90 hover:text-gradient transition-all duration-300 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 FAQ
