@@ -108,7 +108,7 @@ export const Gallery = () => {
   return (
     <section id="gallery" className="py-20 bg-background">
       {/* Upper section - normal container width */}
-      <div className="container mx-auto px-4">
+      <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
         <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
