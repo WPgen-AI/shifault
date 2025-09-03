@@ -12,6 +12,14 @@ import {
 import type { CarouselApi } from "@/components/ui/carousel";
 import { SectionBadge } from "@/components/SectionBadge";
 
+// Import background images
+import galleryBg1 from "@/assets/gallery-bg-1.jpg";
+import galleryBg2 from "@/assets/gallery-bg-2.jpg";
+import galleryBg3 from "@/assets/gallery-bg-3.jpg";
+import galleryBg4 from "@/assets/gallery-bg-4.jpg";
+import galleryBg5 from "@/assets/gallery-bg-5.jpg";
+import galleryBg6 from "@/assets/gallery-bg-6.jpg";
+
 interface GalleryItem {
   id: string;
   title: string;
@@ -33,7 +41,7 @@ export const Gallery = () => {
       category: "Web Design",
       summary: "Creating stunning user interfaces with modern design principles and cutting-edge technologies.",
       url: "#",
-      image: "bg-gradient-to-br from-primary to-primary-glow"
+      image: galleryBg1
     },
     {
       id: "item-2",
@@ -41,7 +49,7 @@ export const Gallery = () => {
       category: "E-commerce",
       summary: "Powerful e-commerce platforms to grow your business in the digital marketplace.",
       url: "#",
-      image: "bg-gradient-to-br from-accent to-accent-foreground"
+      image: galleryBg2
     },
     {
       id: "item-3",
@@ -49,7 +57,7 @@ export const Gallery = () => {
       category: "Mobile App",
       summary: "User-centered mobile applications for iOS and Android platforms with seamless experiences.",
       url: "#",
-      image: "bg-gradient-to-br from-secondary to-secondary-foreground"
+      image: galleryBg3
     },
     {
       id: "item-4",
@@ -57,7 +65,7 @@ export const Gallery = () => {
       category: "Branding",
       summary: "Professional and consistent corporate identity solutions that reflect your brand values.",
       url: "#",
-      image: "bg-gradient-to-br from-muted to-muted-foreground"
+      image: galleryBg4
     },
     {
       id: "item-5",
@@ -65,7 +73,7 @@ export const Gallery = () => {
       category: "Marketing",
       summary: "Comprehensive SEO, social media, and digital advertising strategies to accelerate growth.",
       url: "#",
-      image: "bg-gradient-to-br from-primary-glow to-accent"
+      image: galleryBg5
     },
     {
       id: "item-6",
@@ -73,7 +81,7 @@ export const Gallery = () => {
       category: "Design",
       summary: "Creative design solutions that prioritize user experience and interface excellence.",
       url: "#",
-      image: "bg-gradient-to-br from-accent to-primary"
+      image: galleryBg6
     }
   ];
 
@@ -160,8 +168,10 @@ export const Gallery = () => {
               <CarouselItem key={item.id} className="pl-6 md:basis-1/3 lg:basis-1/4">
                 <div className="group block relative w-full h-[400px]">
                   <Card className="overflow-hidden rounded-xl h-full w-full">
-                    {/* Background gradient */}
-                    <div className={`relative h-full w-full transition-all duration-500 group-hover:h-1/2 ${item.image}`}>
+                    <div 
+                      className="relative h-full w-full transition-all duration-500 group-hover:h-1/2 bg-cover bg-center bg-no-repeat"
+                      style={{ backgroundImage: `url(${item.image})` }}
+                    >
                       {/* Fade overlay at bottom */}
                       <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       
