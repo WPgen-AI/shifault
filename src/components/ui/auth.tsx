@@ -64,9 +64,9 @@ const TabButton = ({
 }) => (
   <button
     onClick={onClick}
-    className={`relative flex-1 py-3 px-6 text-sm font-medium rounded-lg transition-all duration-300 transform ${
+    className={`relative flex-1 py-2 px-4 text-xs font-medium rounded-lg transition-all duration-300 transform ${
       active 
-        ? 'text-primary-foreground bg-background shadow-[0_8px_16px_hsl(var(--primary)/0.2)] scale-105 z-10' 
+        ? 'text-primary-foreground bg-background shadow-[0_4px_12px_hsl(var(--primary)/0.2)] scale-105 z-10' 
         : 'text-muted-foreground hover:text-foreground hover:bg-background/50 hover:scale-102'
     }`}
     style={active ? { background: 'var(--gradient-primary)' } : {}}
@@ -118,19 +118,19 @@ export const AuthPage: React.FC<AuthPageProps> = ({
       <section className="flex-1 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           <div className="flex flex-col gap-6">
-            <h1 className="animate-element animate-delay-100 text-4xl md:text-5xl font-semibold leading-tight">
+            <h1 className="animate-element animate-delay-100 text-2xl md:text-3xl font-semibold leading-tight">
               <span className="font-light text-foreground tracking-tighter">
                 {isSignIn ? 'Welcome Back' : 'Join Us'}
               </span>
             </h1>
-            <p className="animate-element animate-delay-200 text-muted-foreground">
+            <p className="animate-element animate-delay-200 text-sm text-muted-foreground">
               {isSignIn 
                 ? 'Access your account and continue your journey with us' 
                 : 'Create your account and start your journey with us'}
             </p>
 
             {/* Tab Navigation */}
-            <div className="animate-element animate-delay-250 flex gap-1 p-2 bg-muted/30 backdrop-blur-sm rounded-xl border border-border/40 shadow-inner">
+            <div className="animate-element animate-delay-250 flex gap-1 p-1.5 bg-muted/30 backdrop-blur-sm rounded-xl border border-border/40 shadow-inner">
               <TabButton
                 active={isSignIn} 
                 onClick={() => setAuthMode('signin')}
@@ -149,13 +149,13 @@ export const AuthPage: React.FC<AuthPageProps> = ({
               {/* Name field - only for sign up */}
               {isSignUp && (
                 <div className="animate-element animate-delay-300">
-                  <label className="block text-sm font-medium text-muted-foreground mb-2">Full Name</label>
+                  <label className="block text-xs font-medium text-muted-foreground mb-1.5">Full Name</label>
                   <GlassInputWrapper>
                     <input 
                       name="fullName" 
                       type="text" 
                       placeholder="Enter your full name" 
-                      className="w-full bg-transparent text-sm px-4 py-3.5 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
+                      className="w-full bg-transparent text-sm px-3 py-2.5 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
                       required
                     />
                   </GlassInputWrapper>
@@ -164,13 +164,13 @@ export const AuthPage: React.FC<AuthPageProps> = ({
 
               {/* Email field */}
               <div className="animate-element animate-delay-300">
-                <label className="block text-sm font-medium text-muted-foreground mb-2">Email Address</label>
+                <label className="block text-xs font-medium text-muted-foreground mb-1.5">Email Address</label>
                 <GlassInputWrapper>
                   <input 
                     name="email" 
                     type="email" 
                     placeholder="Enter your email address" 
-                    className="w-full bg-transparent text-sm px-4 py-3.5 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
+                    className="w-full bg-transparent text-sm px-3 py-2.5 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
                     required
                   />
                 </GlassInputWrapper>
@@ -178,20 +178,20 @@ export const AuthPage: React.FC<AuthPageProps> = ({
 
               {/* Password field */}
               <div className="animate-element animate-delay-400">
-                <label className="block text-sm font-medium text-muted-foreground mb-2">Password</label>
+                <label className="block text-xs font-medium text-muted-foreground mb-1.5">Password</label>
                 <GlassInputWrapper>
                   <div className="relative">
                     <input 
                       name="password" 
                       type={showPassword ? 'text' : 'password'} 
                       placeholder={isSignIn ? "Enter your password" : "Create a password"}
-                      className="w-full bg-transparent text-sm px-4 py-3.5 pr-12 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
+                      className="w-full bg-transparent text-sm px-3 py-2.5 pr-10 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
                       required
                     />
                     <button 
                       type="button" 
                       onClick={() => setShowPassword(!showPassword)} 
-                      className="absolute inset-y-0 right-3 flex items-center text-muted-foreground hover:text-foreground transition-colors"
+                      className="absolute inset-y-0 right-2.5 flex items-center text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {showPassword ? (
                         <EyeOff className="w-4 h-4" />
@@ -206,20 +206,20 @@ export const AuthPage: React.FC<AuthPageProps> = ({
               {/* Confirm Password field - only for sign up */}
               {isSignUp && (
                 <div className="animate-element animate-delay-450">
-                  <label className="block text-sm font-medium text-muted-foreground mb-2">Confirm Password</label>
+                  <label className="block text-xs font-medium text-muted-foreground mb-1.5">Confirm Password</label>
                   <GlassInputWrapper>
                     <div className="relative">
                       <input 
                         name="confirmPassword" 
                         type={showConfirmPassword ? 'text' : 'password'} 
                         placeholder="Confirm your password" 
-                        className="w-full bg-transparent text-sm px-4 py-3.5 pr-12 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
+                        className="w-full bg-transparent text-sm px-3 py-2.5 pr-10 rounded-xl focus:outline-none placeholder:text-muted-foreground/60" 
                         required
                       />
                       <button 
                         type="button" 
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)} 
-                        className="absolute inset-y-0 right-3 flex items-center text-muted-foreground hover:text-foreground transition-colors"
+                        className="absolute inset-y-0 right-2.5 flex items-center text-muted-foreground hover:text-foreground transition-colors"
                       >
                         {showConfirmPassword ? (
                           <EyeOff className="w-4 h-4" />
@@ -234,15 +234,15 @@ export const AuthPage: React.FC<AuthPageProps> = ({
 
               {/* Remember me checkbox - only for sign in */}
               {isSignIn && (
-                <div className="animate-element animate-delay-500 flex items-center justify-between text-sm">
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" name="rememberMe" className="custom-checkbox" />
+                <div className="animate-element animate-delay-500 flex items-center justify-between text-xs">
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" name="rememberMe" className="custom-checkbox scale-75" />
                     <span className="text-foreground/90">Keep me signed in</span>
                   </label>
                   <a 
                     href="#" 
                     onClick={(e) => { e.preventDefault(); onResetPassword?.(); }} 
-                    className="hover:underline text-violet-400 transition-colors"
+                    className="hover:underline text-accent-primary transition-colors"
                   >
                     Reset password
                   </a>
@@ -251,15 +251,15 @@ export const AuthPage: React.FC<AuthPageProps> = ({
 
               {/* Terms acceptance - only for sign up */}
               {isSignUp && (
-                <div className="animate-element animate-delay-500 flex items-start gap-3 text-sm">
-                  <input type="checkbox" name="acceptTerms" className="custom-checkbox mt-1" required />
+                <div className="animate-element animate-delay-500 flex items-start gap-2 text-xs">
+                  <input type="checkbox" name="acceptTerms" className="custom-checkbox scale-75 mt-0.5" required />
                   <span className="text-foreground/90">
                     I agree to the{' '}
-                    <a href="#" className="text-violet-400 hover:underline transition-colors">
+                    <a href="#" className="text-accent-primary hover:underline transition-colors">
                       Terms of Service
                     </a>
                     {' '}and{' '}
-                    <a href="#" className="text-violet-400 hover:underline transition-colors">
+                    <a href="#" className="text-accent-primary hover:underline transition-colors">
                       Privacy Policy
                     </a>
                   </span>
@@ -268,7 +268,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
 
               <button 
                 type="submit" 
-                className="animate-element animate-delay-600 w-full rounded-xl py-3.5 font-medium text-primary-foreground transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_8px_25px_hsl(var(--primary)/0.25)] active:scale-[0.98]"
+                className="animate-element animate-delay-600 w-full rounded-xl py-2.5 text-sm font-medium text-primary-foreground transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_6px_20px_hsl(var(--primary)/0.25)] active:scale-[0.98]"
                 style={{ background: 'var(--gradient-primary)' }}
               >
                 {isSignIn ? 'Sign In' : 'Create Account'}
@@ -277,27 +277,27 @@ export const AuthPage: React.FC<AuthPageProps> = ({
 
             <div className="animate-element animate-delay-700 relative flex items-center justify-center">
               <span className="w-full border-t border-border/40"></span>
-              <span className="px-6 text-sm text-muted-foreground bg-background/90 backdrop-blur-sm rounded-full py-1 border border-border/20">
+              <span className="px-4 text-xs text-muted-foreground bg-background/90 backdrop-blur-sm rounded-full py-1 border border-border/20">
                 Or continue with
               </span>
             </div>
 
             <button 
               onClick={handleGoogleAuth} 
-              className="animate-element animate-delay-800 w-full flex items-center justify-center gap-3 border border-border/40 rounded-xl py-3.5 bg-background/50 backdrop-blur-sm hover:bg-background/80 hover:border-border/60 hover:shadow-[0_4px_12px_hsl(var(--border)/0.15)] transition-all duration-300 transform hover:scale-[1.01]"
+              className="animate-element animate-delay-800 w-full flex items-center justify-center gap-3 border border-border/40 rounded-xl py-2.5 text-sm bg-background/50 backdrop-blur-sm hover:bg-background/80 hover:border-border/60 hover:shadow-[0_4px_12px_hsl(var(--border)/0.15)] transition-all duration-300 transform hover:scale-[1.01]"
             >
                 <GoogleIcon />
                 <span className="font-medium">Continue with Google</span>
             </button>
 
             {/* Switch mode link */}
-            <p className="animate-element animate-delay-900 text-center text-sm text-muted-foreground">
+            <p className="animate-element animate-delay-900 text-center text-xs text-muted-foreground">
               {isSignIn ? (
                 <>
                   New to our platform?{' '}
                   <button 
                     onClick={() => setAuthMode('signup')} 
-                    className="text-violet-400 hover:underline transition-colors"
+                    className="text-accent-primary hover:underline transition-colors font-medium"
                   >
                     Create Account
                   </button>
@@ -307,7 +307,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                   Already have an account?{' '}
                   <button 
                     onClick={() => setAuthMode('signin')} 
-                    className="text-violet-400 hover:underline transition-colors"
+                    className="text-accent-primary hover:underline transition-colors font-medium"
                   >
                     Sign In
                   </button>
