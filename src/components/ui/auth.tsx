@@ -275,9 +275,11 @@ export const AuthPage: React.FC<AuthPageProps> = ({
               </button>
             </form>
 
-            <div className="animate-element animate-delay-700 relative flex items-center justify-center">
-              <span className="w-full border-t border-border/40"></span>
-              <span className="px-4 text-xs text-muted-foreground bg-background/90 backdrop-blur-sm rounded-full py-1 border border-border/20">
+            <div className="animate-element animate-delay-700 relative flex items-center justify-center my-4">
+              <span className="absolute inset-0 flex items-center">
+                <span className="w-full border-t border-border/40"></span>
+              </span>
+              <span className="relative px-4 text-xs text-muted-foreground bg-background rounded-full py-1 border border-border/20">
                 Or continue with
               </span>
             </div>
