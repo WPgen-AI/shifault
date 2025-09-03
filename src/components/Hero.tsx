@@ -22,13 +22,22 @@ export const Hero = () => {
 
   return (
     <main className="overflow-hidden">
-      <section id="hero" className="relative min-h-screen flex items-center justify-center">
-        {/* Grid Background Pattern */}
-        <div className="absolute inset-0 max-md:hidden top-[400px] -z-10 h-[400px] w-full bg-transparent bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+      <section id="hero" className="relative min-h-[80vh] flex items-center justify-center hero-section">
+        {/* Background Gradient */}
+        <div className="absolute inset-0 gradient-hero"></div>
         
-        <div className="flex flex-col items-center justify-center px-6 text-center relative z-10">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        {/* Grid Background Pattern */}
+        <div className="absolute inset-0 max-md:hidden top-[200px] -z-10 h-[400px] w-full bg-transparent bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+        
+        <div className="flex flex-col items-center justify-center px-6 text-center relative z-10 container mx-auto">
           {/* Introduction Badge */}
-          <div className="mb-6 mt-10 sm:justify-center md:mb-4 md:mt-40">
+          <div className="mb-6 mt-4 sm:justify-center md:mb-4 md:mt-8">
             <div className="relative flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
               Introducing No-Code Builder.
               <span className="ml-1 flex items-center font-semibold text-foreground">
@@ -39,7 +48,7 @@ export const Hero = () => {
 
           {/* Main Content */}
           <div className="mx-auto max-w-5xl">
-            <div className="relative mx-auto h-full bg-background border border-border rounded-lg py-12 p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)]">
+            <div className="relative mx-auto h-full bg-card/50 backdrop-blur-sm border border-border rounded-lg py-12 p-6 [mask-image:radial-gradient(800rem_96rem_at_center,white,transparent)]">
               {/* Corner Plus Icons */}
               <Plus
                 strokeWidth={4}
