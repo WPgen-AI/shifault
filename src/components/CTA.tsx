@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
 import { SectionBadge } from "@/components/SectionBadge";
+import { Link } from "react-router-dom";
 
 export const CTA = () => {
   return (
@@ -39,14 +40,16 @@ export const CTA = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto gradient-primary text-primary-foreground hover:shadow-glow transition-smooth group"
-            >
-              <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-              Get Started Free
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/login">
+              <Button 
+                size="lg" 
+                className="w-full sm:w-auto gradient-primary text-primary-foreground hover:shadow-glow transition-smooth group"
+              >
+                <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                Get Started Free
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             
             <Button 
               variant="outline" 

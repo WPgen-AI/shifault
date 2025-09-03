@@ -59,7 +59,7 @@ const pricingPlans: PricingPlan[] = [
     ],
     description: "Ideal for growing teams and businesses",
     buttonText: "Get Started",
-    href: "#",
+    href: "/login",
     isPopular: true,
   },
   {

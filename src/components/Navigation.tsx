@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Wand2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,9 +46,11 @@ export const Navigation = () => {
             <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
               Sign In
             </Button>
-            <Button className="gradient-primary text-primary-foreground hover:shadow-glow transition-smooth">
-              Get Started Free
-            </Button>
+            <Link to="/login">
+              <Button className="gradient-primary text-primary-foreground hover:shadow-glow transition-smooth">
+                Get Started Free
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile/Tablet Hamburger Button */}
@@ -113,12 +116,14 @@ export const Navigation = () => {
                 >
                   Sign In
                 </Button>
-                <Button 
-                  className="w-full gradient-primary text-primary-foreground hover:shadow-glow transition-smooth"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started Free
-                </Button>
+                <Link to="/login">
+                  <Button 
+                    className="w-full gradient-primary text-primary-foreground hover:shadow-glow transition-smooth"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Get Started Free
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>
