@@ -174,7 +174,7 @@ export const Prices = () => {
               }}
               className={cn(
                 "rounded-2xl border p-6 bg-card text-center relative",
-                plan.isPopular ? "border-primary border-2 shadow-glow" : "border-border",
+                plan.isPopular ? "border-[hsl(25_95%_53%)] border-2 shadow-glow" : "border-border",
                 "flex flex-col",
                 !plan.isPopular && "mt-5",
                 index === 0 || index === 2
