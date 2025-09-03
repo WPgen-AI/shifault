@@ -15,14 +15,14 @@ export const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
+            Build Websites with{" "}
             <span className="bg-gradient-hero bg-clip-text text-transparent">
               No-Code
-            </span>{" "}
-            ile Web Sitesi Oluşturun
+            </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Kod yazmadan, dakikalar içinde profesyonel web sitelerinizi tasarlayın ve yayınlayın.
+            Design and publish professional websites in minutes without writing a single line of code.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
@@ -30,20 +30,20 @@ export const Hero = () => {
               size="lg" 
               className="bg-gradient-primary text-primary-foreground hover:shadow-hero transition-all duration-500 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
             >
-              Hemen Başla
+              Start Building Now
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="border-border hover:bg-muted px-8 py-4 text-lg"
             >
-              Demo İzle
+              Watch Demo
             </Button>
           </div>
 
           <div className="mt-16 text-center">
             <p className="text-sm text-muted-foreground mb-4">
-              Binlerce kullanıcının güvendiği platform
+              Trusted by thousands of creators worldwide
             </p>
             <div className="flex justify-center items-center space-x-8 opacity-60">
               <div className="w-16 h-8 bg-muted rounded"></div>
