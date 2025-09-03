@@ -103,11 +103,12 @@ export const Hero = () => {
                 className="border cursor-pointer h-auto w-auto p-2 bg-background/50 backdrop-blur-md"
                 color={["hsl(25 95% 53%)", "hsl(15 88% 45%)"]}
               >
-                <Link to="/login">
-                  <Button className="w-full rounded-xl gradient-primary text-primary-foreground hover:shadow-glow hover:scale-105 hover:opacity-90 transition-all duration-300 ease-out">
-                    Get Started Now
-                  </Button>
-                </Link>
+                <Button 
+                  asChild
+                  className="w-full rounded-xl gradient-primary text-primary-foreground hover:shadow-glow hover:scale-105 hover:opacity-90 transition-all duration-300 ease-out"
+                >
+                  <Link to="/login">Get Started Now</Link>
+                </Button>
               </ShineBorder>
               
               <Button 
