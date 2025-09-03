@@ -89,7 +89,7 @@ export const Hero = () => {
             {/* Description */}
             <h2 className="mt-8 text-2xl md:text-2xl text-foreground">
               Welcome to the future of web development!{" "}
-              <span className="text-accent-primary font-bold">Build anything </span>
+              <span className="text-gradient font-bold">Build anything </span>
             </h2>
 
             <p className="text-muted-foreground py-4">
