@@ -69,8 +69,8 @@ export const CTA = () => {
               viewport={{ once: true }}
               className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 bg-orange-100 dark:bg-orange-100/20 rounded-lg flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-gradient" />
               </div>
               <h3 className="font-semibold mb-2">Lightning Fast</h3>
               <p className="text-sm text-muted-foreground">
@@ -85,8 +85,8 @@ export const CTA = () => {
               viewport={{ once: true }}
               className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6"
             >
-              <div className="w-12 h-12 bg-accent-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <Sparkles className="w-6 h-6 text-accent-primary" />
+              <div className="w-12 h-12 bg-orange-100 dark:bg-orange-100/20 rounded-lg flex items-center justify-center mb-4">
+                <Sparkles className="w-6 h-6 text-gradient" />
               </div>
               <h3 className="font-semibold mb-2">Professional Design</h3>
               <p className="text-sm text-muted-foreground">
@@ -101,8 +101,8 @@ export const CTA = () => {
               viewport={{ once: true }}
               className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-6"
             >
-              <div className="w-12 h-12 bg-success-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <ArrowRight className="w-6 h-6 text-success-primary" />
+              <div className="w-12 h-12 bg-orange-100 dark:bg-orange-100/20 rounded-lg flex items-center justify-center mb-4">
+                <ArrowRight className="w-6 h-6 text-gradient" />
               </div>
               <h3 className="font-semibold mb-2">Easy to Use</h3>
               <p className="text-sm text-muted-foreground">
