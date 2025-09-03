@@ -97,19 +97,20 @@ export const Hero = () => {
 
             {/* Call to Action Buttons */}
             <div className="flex items-center justify-center gap-2 mt-8">
-              <ShineBorder
-                borderRadius={12}
-                borderWidth={2}
-                className="border h-auto w-auto p-2 bg-background/50 backdrop-blur-md"
-                color={["hsl(25 95% 53%)", "hsl(15 88% 45%)"]}
-              >
-                <Button 
-                  asChild
-                  className="w-full rounded-xl gradient-primary text-primary-foreground hover:shadow-glow hover:scale-105 hover:opacity-90 transition-all duration-300 ease-out"
+              <Link to="/login">
+                <ShineBorder
+                  borderRadius={12}
+                  borderWidth={2}
+                  className="border h-auto w-auto p-2 bg-background/50 backdrop-blur-md cursor-pointer"
+                  color={["hsl(25 95% 53%)", "hsl(15 88% 45%)"]}
                 >
-                  <Link to="/login">Get Started Now</Link>
-                </Button>
-              </ShineBorder>
+                  <Button 
+                    className="w-full rounded-xl gradient-primary text-primary-foreground hover:shadow-glow hover:scale-105 hover:opacity-90 transition-all duration-300 ease-out"
+                  >
+                    Get Started Now
+                  </Button>
+                </ShineBorder>
+              </Link>
               
               <Button 
                 className="rounded-xl hover:border-[hsl(25_95%_53%)] hover:text-white hover:bg-[hsl(25_85%_65%)] transform-gpu transition-all duration-300 ease-out" 
