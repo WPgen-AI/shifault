@@ -1,107 +1,241 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+"use client";
+
+import { buttonVariants } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+// import { useMediaQuery } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { Check, Star } from "lucide-react";
+// import Link from "next/link";
+import { useState, useRef } from "react";
+import confetti from "canvas-confetti";
+import NumberFlow from "@number-flow/react";
+
+interface PricingPlan {
+  name: string;
+  price: string;
+  yearlyPrice: string;
+  period: string;
+  features: string[];
+  description: string;
+  buttonText: string;
+  href: string;
+  isPopular: boolean;
+}
+
+const pricingPlans: PricingPlan[] = [
+  {
+    name: "STARTER",
+    price: "29",
+    yearlyPrice: "23",
+    period: "per month",
+    features: [
+      "Up to 5 projects",
+      "Basic analytics",
+      "48-hour support response",
+      "Community access",
+      "Email support",
+    ],
+    description: "Perfect for individuals and small projects",
+    buttonText: "Start Free Trial",
+    href: "#",
+    isPopular: false,
+  },
+  {
+    name: "PROFESSIONAL",
+    price: "99",
+    yearlyPrice: "79",
+    period: "per month",
+    features: [
+      "Unlimited projects",
+      "Advanced analytics",
+      "24-hour support response",
+      "Priority support",
+      "Team collaboration",
+      "API access",
+      "Custom integrations",
+    ],
+    description: "Ideal for growing teams and businesses",
+    buttonText: "Get Started",
+    href: "#",
+    isPopular: true,
+  },
+  {
+    name: "ENTERPRISE",
+    price: "299",
+    yearlyPrice: "239",
+    period: "per month",
+    features: [
+      "Everything in Professional",
+      "Custom solutions",
+      "Dedicated account manager",
+      "1-hour support response",
+      "SSO Authentication",
+      "Advanced security",
+      "Custom contracts",
+      "SLA agreement",
+    ],
+    description: "For large organizations with specific needs",
+    buttonText: "Contact Sales",
+    href: "#",
+    isPopular: false,
+  },
+];
 
 export const Prices = () => {
-  const plans = [
-    {
-      name: "Starter",
-      price: "$0",
-      period: "/month",
-      description: "Perfect for personal projects and trying out our platform",
-      features: [
-        "1 Website",
-        "Basic Templates",
-        "Mobile Responsive",
-        "SSL Certificate",
-        "Community Support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$19",
-      period: "/month",
-      description: "Best for freelancers and small businesses",
-      features: [
-        "5 Websites",
-        "Premium Templates",
-        "Custom Domain",
-        "Advanced SEO Tools",
-        "Priority Support",
-        "Analytics Dashboard"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$49",
-      period: "/month",
-      description: "For agencies and large organizations",
-      features: [
-        "Unlimited Websites",
-        "White-label Solution",
-        "API Access",
-        "Custom Integrations",
-        "Dedicated Support",
-        "Advanced Analytics",
-        "Team Collaboration"
-      ],
-      popular: false
+  const [isMonthly, setIsMonthly] = useState(true);
+  const [isMobile] = useState(false);
+  const switchRef = useRef<HTMLButtonElement>(null);
+
+  const handleToggle = (checked: boolean) => {
+    setIsMonthly(!checked);
+    if (checked && switchRef.current) {
+      const rect = switchRef.current.getBoundingClientRect();
+      const x = rect.left + rect.width / 2;
+      const y = rect.top + rect.height / 2;
+
+      confetti({
+        particleCount: 50,
+        spread: 60,
+        origin: {
+          x: x / window.innerWidth,
+          y: y / window.innerHeight,
+        },
+        colors: [
+          "hsl(var(--primary))",
+          "hsl(var(--accent))",
+          "hsl(var(--secondary))",
+          "hsl(var(--muted))",
+        ],
+        ticks: 200,
+        gravity: 1.2,
+        decay: 0.94,
+        startVelocity: 30,
+        shapes: ["circle"],
+      });
     }
-  ];
+  };
 
   return (
-    <section id="pricing" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
-            Simple Pricing
+    <section className="py-20 bg-muted/30 dark:bg-transparent">
+      <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
+        <div className="text-center space-y-4 mb-12">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground">
+            Simple, Transparent Pricing
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose the perfect plan for your needs. Start free and upgrade as you grow.
+          <p className="text-xl text-muted-foreground">
+            Choose the plan that works for you. All plans include access to our platform, lead generation tools, and dedicated support.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
-            <Card key={index} className={`relative border-border bg-card hover:shadow-glow transition-smooth ${plan.popular ? 'ring-2 ring-primary scale-105' : 'hover-lift'}`}>
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="gradient-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
+        <div className="flex justify-center items-center gap-4 mb-10">
+          <span className="text-sm font-medium text-muted-foreground">Monthly</span>
+          <Label className="relative inline-flex items-center cursor-pointer">
+            <Switch
+              ref={switchRef as any}
+              checked={!isMonthly}
+              onCheckedChange={handleToggle}
+              className="relative"
+            />
+          </Label>
+          <span className="text-sm font-medium">
+            Annual <span className="text-primary font-semibold">(Save 20%)</span>
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {pricingPlans.map((plan, index) => (
+            <motion.div
+              key={index}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={
+                !isMobile
+                  ? {
+                      y: plan.isPopular ? -20 : 0,
+                      opacity: 1,
+                      x: index === 2 ? -30 : index === 0 ? 30 : 0,
+                      scale: index === 0 || index === 2 ? 0.94 : 1.0,
+                    }
+                  : { y: 0, opacity: 1 }
+              }
+              viewport={{ once: true }}
+              transition={{
+                duration: 1.6,
+                type: "spring",
+                stiffness: 100,
+                damping: 30,
+                delay: 0.4,
+                opacity: { duration: 0.5 },
+              }}
+              className={cn(
+                "rounded-2xl border p-6 bg-card text-center relative",
+                plan.isPopular ? "border-primary border-2 shadow-glow" : "border-border",
+                "flex flex-col",
+                !plan.isPopular && "mt-5",
+                index === 0 || index === 2
+                  ? "z-0 transform translate-x-0 translate-y-0"
+                  : "z-10",
+                index === 0 && "origin-right",
+                index === 2 && "origin-left"
+              )}
+            >
+              {plan.isPopular && (
+                <div className="absolute top-0 right-0 bg-primary py-1 px-3 rounded-bl-xl rounded-tr-xl flex items-center">
+                  <Star className="text-primary-foreground h-4 w-4 fill-current" />
+                  <span className="text-primary-foreground ml-1 font-semibold text-sm">
+                    Popular
                   </span>
                 </div>
               )}
               
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl font-heading font-bold">{plan.name}</CardTitle>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-foreground">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.period}</span>
+              <div className="flex-1 flex flex-col">
+                <p className="text-base font-semibold text-muted-foreground mb-6">
+                  {plan.name}
+                </p>
+                
+                <div className="mb-6 flex items-center justify-center gap-x-2">
+                  <span className="text-5xl font-bold tracking-tight text-foreground">
+                    ${isMonthly ? plan.price : plan.yearlyPrice}
+                  </span>
+                  <span className="text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
+                    / {plan.period}
+                  </span>
                 </div>
-                <CardDescription className="mt-2">{plan.description}</CardDescription>
-              </CardHeader>
-              
-              <CardContent className="space-y-6">
-                <ul className="space-y-3">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <div className="w-5 h-5 bg-primary/20 rounded-full flex items-center justify-center">
-                        <span className="text-primary text-sm">✓</span>
-                      </div>
-                      <span className="text-muted-foreground">{feature}</span>
+
+                <p className="text-xs leading-5 text-muted-foreground mb-6">
+                  {isMonthly ? "billed monthly" : "billed annually"}
+                </p>
+
+                <ul className="mb-6 gap-3 flex flex-col text-left">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
-                <Button 
-                  className={`w-full ${plan.popular ? 'gradient-primary text-primary-foreground hover:shadow-glow' : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'} transition-smooth`}
-                  size="lg"
+
+                <hr className="w-full my-6 border-border" />
+
+                <a
+                  href={plan.href}
+                  className={cn(
+                    buttonVariants({
+                      variant: plan.isPopular ? "default" : "outline",
+                    }),
+                    "group relative w-full gap-2 overflow-hidden text-base font-semibold tracking-tight mb-4",
+                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-1"
+                  )}
                 >
-                  Get Started
-                </Button>
-              </CardContent>
-            </Card>
+                  {plan.buttonText}
+                </a>
+                
+                <p className="text-xs leading-5 text-muted-foreground">
+                  {plan.description}
+                </p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
