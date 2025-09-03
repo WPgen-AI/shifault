@@ -101,6 +101,7 @@ export const Hero = () => {
             {/* Call to Action Buttons */}
             <div className="flex items-center justify-center gap-2 mt-8">
               <ShineBorder
+                borderRadius={12}
                 borderWidth={2}
                 className="border cursor-pointer h-auto w-auto p-2 bg-background/50 backdrop-blur-md"
                 color={["hsl(var(--accent-primary))", "hsl(var(--brand-sapphire-primary))", "hsl(var(--brand-twilight-primary))"]}
