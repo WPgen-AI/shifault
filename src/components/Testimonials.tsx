@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
+import { SectionBadge } from "@/components/SectionBadge";
 
 const testimonials = [
   {
@@ -122,9 +123,9 @@ export const Testimonials = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-3xl mx-auto text-center mb-16"
         >
-          <div className="inline-flex items-center rounded-lg border px-3 py-1 text-xs font-medium mb-6">
+          <SectionBadge>
             Testimonials
-          </div>
+          </SectionBadge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-4">
             What Our Customers Say
           </h2>

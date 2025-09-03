@@ -1,10 +1,22 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Shield, Users } from 'lucide-react'
+import { SectionBadge } from '@/components/SectionBadge'
 
 export function Features() {
     return (
         <section className="bg-muted/30 py-16 md:py-32 dark:bg-transparent">
             <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
+                <div className="text-center mb-16">
+                    <SectionBadge>
+                        Features
+                    </SectionBadge>
+                    <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
+                        Powerful Features for Your Business
+                    </h2>
+                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                        Everything you need to build and scale your business with our comprehensive platform.
+                    </p>
+                </div>
                 <div className="relative">
                     <div className="relative z-10 grid grid-cols-6 gap-3">
                         <Card className="relative col-span-full flex overflow-hidden lg:col-span-2 border-border bg-card hover:shadow-glow transition-smooth hover-lift">

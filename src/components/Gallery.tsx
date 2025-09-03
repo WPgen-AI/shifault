@@ -10,6 +10,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import type { CarouselApi } from "@/components/ui/carousel";
+import { SectionBadge } from "@/components/SectionBadge";
 
 interface GalleryItem {
   id: string;
@@ -111,6 +112,9 @@ export const Gallery = () => {
       <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
         <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16">
           <div className="max-w-2xl">
+            <SectionBadge>
+              Our Services
+            </SectionBadge>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
               Services Gallery
             </h2>
@@ -163,7 +167,8 @@ export const Gallery = () => {
                       
                       {/* Category badge */}
                       <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1 rounded-full text-xs font-medium bg-white/20 text-white backdrop-blur-sm">
+                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-white/20 text-white backdrop-blur-sm border border-white/20">
+                          <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
                           {item.category}
                         </span>
                       </div>

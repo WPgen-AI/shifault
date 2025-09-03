@@ -11,6 +11,7 @@ import { Check, Star } from "lucide-react";
 import { useState, useRef } from "react";
 import confetti from "canvas-confetti";
 import NumberFlow from "@number-flow/react";
+import { SectionBadge } from "@/components/SectionBadge";
 
 interface PricingPlan {
   name: string;
@@ -121,6 +122,9 @@ export const Prices = () => {
     <section className="py-20 bg-muted/30 dark:bg-transparent">
       <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
         <div className="text-center space-y-4 mb-12">
+          <SectionBadge>
+            Pricing Plans
+          </SectionBadge>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground">
             Simple, Transparent Pricing
           </h2>
