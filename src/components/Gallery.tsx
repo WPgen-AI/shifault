@@ -28,49 +28,49 @@ export const Gallery = () => {
   const galleryItems: GalleryItem[] = [
     {
       id: "item-1",
-      title: "Modern Web Tasarımı",
+      title: "Modern Web Design",
       category: "Web Design",
-      summary: "Kullanıcı dostu arayüzler ve etkileyici görseller ile modern web siteleri oluşturuyoruz.",
+      summary: "Creating stunning user interfaces with modern design principles and cutting-edge technologies.",
       url: "#",
       image: "bg-gradient-to-br from-primary to-primary-glow"
     },
     {
       id: "item-2",
-      title: "E-ticaret Çözümleri",
+      title: "E-commerce Solutions",
       category: "E-commerce",
-      summary: "Güçlü e-ticaret platformları ile işletmenizi dijital dünyada büyütün.",
+      summary: "Powerful e-commerce platforms to grow your business in the digital marketplace.",
       url: "#",
       image: "bg-gradient-to-br from-accent to-accent-foreground"
     },
     {
       id: "item-3",
-      title: "Mobil Uygulama Geliştirme",
+      title: "Mobile App Development",
       category: "Mobile App",
-      summary: "İOS ve Android platformları için kullanıcı odaklı mobil uygulamalar.",
+      summary: "User-centered mobile applications for iOS and Android platforms with seamless experiences.",
       url: "#",
       image: "bg-gradient-to-br from-secondary to-secondary-foreground"
     },
     {
       id: "item-4",
-      title: "Kurumsal Kimlik Tasarımı",
+      title: "Brand Identity Design",
       category: "Branding",
-      summary: "Markanız için profesyonel ve tutarlı kurumsal kimlik çözümleri.",
+      summary: "Professional and consistent corporate identity solutions that reflect your brand values.",
       url: "#",
       image: "bg-gradient-to-br from-muted to-muted-foreground"
     },
     {
       id: "item-5",
-      title: "Dijital Pazarlama",
+      title: "Digital Marketing",
       category: "Marketing",
-      summary: "SEO, sosyal medya ve dijital reklam stratejileri ile büyüyün.",
+      summary: "Comprehensive SEO, social media, and digital advertising strategies to accelerate growth.",
       url: "#",
       image: "bg-gradient-to-br from-primary-glow to-accent"
     },
     {
       id: "item-6",
-      title: "UI/UX Tasarım",
+      title: "UI/UX Design",
       category: "Design",
-      summary: "Kullanıcı deneyimini ön planda tutan yaratıcı tasarım çözümleri.",
+      summary: "Creative design solutions that prioritize user experience and interface excellence.",
       url: "#",
       image: "bg-gradient-to-br from-accent to-primary"
     }
@@ -112,10 +112,10 @@ export const Gallery = () => {
         <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
-              Hizmetler Galerisi
+              Services Gallery
             </h2>
             <p className="text-xl text-muted-foreground">
-              Dijital dünyada fark yaratmak için tasarladığımız yenilikçi çözümler ve teknolojiler.
+              Explore our innovative solutions and cutting-edge technologies designed to make a difference in the digital world.
             </p>
           </div>
           <div className="flex gap-2 mt-4 md:mt-0">
