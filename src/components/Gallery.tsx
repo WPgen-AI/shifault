@@ -187,7 +187,9 @@ export const Gallery = () => {
                     {/* Text Section */}
                     <div className="absolute bottom-0 left-0 w-full p-6 transition-all duration-500 group-hover:h-1/2 group-hover:flex flex-col justify-center bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100">
                       <h3 className="text-lg font-medium md:text-xl text-foreground mb-2">
-                        {item.title}
+                        <a href="#" className="hover:text-primary transition-colors duration-300">
+                          {item.title}
+                        </a>
                       </h3>
                       <p className="text-muted-foreground text-sm md:text-base line-clamp-2 mb-4">
                         {item.summary}
