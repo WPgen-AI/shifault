@@ -172,11 +172,10 @@ export const Prices = () => {
                 delay: 0.4,
                 opacity: { duration: 0.5 },
               }}
-               className={cn(
-                 "rounded-2xl border p-6 bg-card text-center relative",
-                 plan.isPopular ? "border-primary border-2 shadow-glow" : "border-border",
-                 plan.isPopular && "gradient-primary",
-                 "flex flex-col",
+              className={cn(
+                "rounded-2xl border p-6 bg-card text-center relative",
+                plan.isPopular ? "border-primary border-2 shadow-glow" : "border-border",
+                "flex flex-col",
                 !plan.isPopular && "mt-5",
                 index === 0 || index === 2
                   ? "z-0 transform translate-x-0 translate-y-0"
@@ -195,43 +194,28 @@ export const Prices = () => {
               )}
               
               <div className="flex-1 flex flex-col">
-                 <p className={cn(
-                   "text-base font-semibold mb-6",
-                   plan.isPopular ? "text-primary-foreground/90" : "text-muted-foreground"
-                 )}>
-                   {plan.name}
-                 </p>
+                <p className="text-base font-semibold text-muted-foreground mb-6">
+                  {plan.name}
+                </p>
                 
-                 <div className="mb-6 flex items-center justify-center gap-x-2">
-                   <span className={cn(
-                     "text-5xl font-bold tracking-tight",
-                     plan.isPopular ? "text-primary-foreground" : "text-foreground"
-                   )}>
-                     ${isMonthly ? plan.price : plan.yearlyPrice}
-                   </span>
-                   <span className={cn(
-                     "text-sm font-semibold leading-6 tracking-wide",
-                     plan.isPopular ? "text-primary-foreground/80" : "text-muted-foreground"
-                   )}>
-                     / {plan.period}
-                   </span>
+                <div className="mb-6 flex items-center justify-center gap-x-2">
+                  <span className="text-5xl font-bold tracking-tight text-foreground">
+                    ${isMonthly ? plan.price : plan.yearlyPrice}
+                  </span>
+                  <span className="text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
+                    / {plan.period}
+                  </span>
                 </div>
 
-                 <p className={cn(
-                   "text-xs leading-5 mb-6",
-                   plan.isPopular ? "text-primary-foreground/70" : "text-muted-foreground"
-                 )}>
-                   {isMonthly ? "billed monthly" : "billed annually"}
-                 </p>
+                <p className="text-xs leading-5 text-muted-foreground mb-6">
+                  {isMonthly ? "billed monthly" : "billed annually"}
+                </p>
 
                 <ul className="mb-6 gap-3 flex flex-col text-left">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                       <span className={cn(
-                         "text-sm",
-                         plan.isPopular ? "text-primary-foreground" : "text-foreground"
-                       )}>{feature}</span>
+                      <span className="text-sm text-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -251,12 +235,9 @@ export const Prices = () => {
                   {plan.buttonText}
                 </a>
                 
-                 <p className={cn(
-                   "text-xs leading-5",
-                   plan.isPopular ? "text-primary-foreground/70" : "text-muted-foreground"
-                 )}>
-                   {plan.description}
-                 </p>
+                <p className="text-xs leading-5 text-muted-foreground">
+                  {plan.description}
+                </p>
               </div>
             </motion.div>
           ))}
