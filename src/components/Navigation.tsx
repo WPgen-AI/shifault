@@ -16,7 +16,7 @@ export const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 gradient-primary rounded-lg elevation"></div>
-            <h1 className="text-xl font-heading font-bold text-foreground">NoCode Builder</h1>
+            <h1 className="text-xl font-heading font-bold text-foreground">Project Name</h1>
           </div>
           
           {/* Desktop Navigation */}
