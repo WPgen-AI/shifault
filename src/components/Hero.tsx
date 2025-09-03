@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { AvatarCircles } from "@/components/ui/avatar-circles";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { renderCanvas, ShineBorder, TypeWriter } from "@/components/ui/hero-design";
+import { ShineBorder, TypeWriter } from "@/components/ui/hero-design";
 import { Plus } from "lucide-react";
 
 export const Hero = () => {
@@ -26,9 +25,6 @@ export const Hero = () => {
     "https://avatars.githubusercontent.com/u/59228569",
   ];
 
-  useEffect(() => {
-    renderCanvas();
-  }, []);
 
   return (
     <AuroraBackground className="bg-muted/30 dark:bg-transparent">
@@ -130,11 +126,6 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Interactive Canvas */}
-        <canvas
-          className="pointer-events-none absolute inset-0 mx-auto"
-          id="canvas"
-        ></canvas>
       </section>
     </AuroraBackground>
   );
