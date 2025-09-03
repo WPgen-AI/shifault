@@ -1,4 +1,4 @@
-import { SignInPage, Testimonial } from "@/components/ui/sign-in";
+import { AuthPage, Testimonial } from "@/components/ui/auth";
 
 const sampleTestimonials: Testimonial[] = [
   {
@@ -21,7 +21,7 @@ const sampleTestimonials: Testimonial[] = [
   },
 ];
 
-const Login = () => {
+const Auth = () => {
   const handleSignIn = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -33,11 +33,34 @@ const Login = () => {
     alert(`Sign In Submitted! Check the browser console for form data.`);
   };
 
+  const handleSignUp = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    console.log("Sign Up submitted:", data);
+    
+    // Password confirmation check
+    if (data.password !== data.confirmPassword) {
+      alert("Passwords don't match!");
+      return;
+    }
+    
+    // Bu kısımda kullanıcılar kendi signup logic'lerini implement edebilirler
+    alert(`Sign Up Submitted! Check the browser console for form data.`);
+  };
+
   const handleGoogleSignIn = () => {
-    console.log("Continue with Google clicked");
+    console.log("Google Sign In clicked");
     
     // Bu kısımda kullanıcılar Google OAuth logic'lerini implement edebilirler
-    alert("Continue with Google clicked");
+    alert("Google Sign In clicked");
+  };
+
+  const handleGoogleSignUp = () => {
+    console.log("Google Sign Up clicked");
+    
+    // Bu kısımda kullanıcılar Google OAuth logic'lerini implement edebilirler
+    alert("Google Sign Up clicked");
   };
   
   const handleResetPassword = () => {
@@ -45,23 +68,19 @@ const Login = () => {
     alert("Reset Password clicked");
   }
 
-  const handleCreateAccount = () => {
-    // Bu kısımda kullanıcılar registration page'e yönlendirme yapabilirler
-    alert("Create Account clicked");
-  }
-
   return (
     <div className="bg-background text-foreground">
-      <SignInPage
+      <AuthPage
         heroImageSrc="https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?w=2160&q=80"
         testimonials={sampleTestimonials}
         onSignIn={handleSignIn}
+        onSignUp={handleSignUp}
         onGoogleSignIn={handleGoogleSignIn}
+        onGoogleSignUp={handleGoogleSignUp}
         onResetPassword={handleResetPassword}
-        onCreateAccount={handleCreateAccount}
       />
     </div>
   );
 };
 
-export default Login;
+export default Auth;
