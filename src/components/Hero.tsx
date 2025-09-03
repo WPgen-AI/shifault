@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { AvatarCircles } from "@/components/ui/avatar-circles";
 import { renderCanvas, ShineBorder, TypeWriter } from "@/components/ui/hero-design";
 import { Plus } from "lucide-react";
 
@@ -14,6 +15,13 @@ export const Hero = () => {
     "Digital Innovation",
     "UI/UX Excellence",
     "Web Solutions",
+  ];
+
+  const avatarUrls = [
+    "https://avatars.githubusercontent.com/u/16860528",
+    "https://avatars.githubusercontent.com/u/20110627",
+    "https://avatars.githubusercontent.com/u/106103625",
+    "https://avatars.githubusercontent.com/u/59228569",
   ];
 
   useEffect(() => {
@@ -118,8 +126,13 @@ export const Hero = () => {
                 Watch Demo
               </Button>
             </div>
+            </div>
+
+            {/* Avatar Circles */}
+            <div className="flex justify-center mt-6">
+              <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
+            </div>
           </div>
-        </div>
 
         {/* Interactive Canvas */}
         <canvas
