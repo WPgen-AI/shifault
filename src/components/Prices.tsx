@@ -3,7 +3,7 @@
 import { buttonVariants } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-// import { useMediaQuery } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
@@ -85,7 +85,7 @@ const pricingPlans: PricingPlan[] = [
 
 export const Prices = () => {
   const [isMonthly, setIsMonthly] = useState(true);
-  const [isMobile] = useState(false);
+  const isMobile = useIsMobile();
   const switchRef = useRef<HTMLButtonElement>(null);
 
   const handleToggle = (checked: boolean) => {
