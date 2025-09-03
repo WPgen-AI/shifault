@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { AvatarCircles } from "@/components/ui/avatar-circles";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 import { renderCanvas, ShineBorder, TypeWriter } from "@/components/ui/hero-design";
 import { Plus } from "lucide-react";
 
@@ -29,17 +30,8 @@ export const Hero = () => {
   }, []);
 
   return (
-    <main className="overflow-hidden">
-      <section id="hero" className="relative min-h-[80vh] flex items-center justify-center hero-section bg-muted/30 dark:bg-transparent">
-        {/* Background Gradient */}
-        <div className="absolute inset-0 gradient-hero"></div>
-        
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
+    <AuroraBackground className="bg-muted/30 dark:bg-transparent">
+      <section id="hero" className="relative min-h-[80vh] flex items-center justify-center hero-section w-full">
         {/* Grid Background Pattern */}
         <div className="absolute inset-0 max-md:hidden top-[200px] -z-10 h-[400px] w-full bg-transparent bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
         
@@ -126,13 +118,13 @@ export const Hero = () => {
                 Watch Demo
               </Button>
             </div>
-            </div>
 
             {/* Avatar Circles */}
             <div className="flex justify-center mt-6">
               <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
             </div>
           </div>
+        </div>
 
         {/* Interactive Canvas */}
         <canvas
@@ -140,6 +132,6 @@ export const Hero = () => {
           id="canvas"
         ></canvas>
       </section>
-    </main>
+    </AuroraBackground>
   );
 };
