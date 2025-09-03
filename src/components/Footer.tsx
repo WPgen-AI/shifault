@@ -94,7 +94,7 @@ export const Footer = () => {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button variant="outline" size="icon" className="rounded-full hover:bg-gradient-to-r hover:from-[hsl(25_95%_53%)] hover:to-[hsl(15_88%_45%)] hover:text-white hover:border-transparent transition-all duration-300">
                       <Facebook className="h-4 w-4" />
                       <span className="sr-only">Facebook</span>
                     </Button>
@@ -108,7 +108,7 @@ export const Footer = () => {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button variant="outline" size="icon" className="rounded-full hover:bg-gradient-to-r hover:from-[hsl(25_95%_53%)] hover:to-[hsl(15_88%_45%)] hover:text-white hover:border-transparent transition-all duration-300">
                       <Twitter className="h-4 w-4" />
                       <span className="sr-only">Twitter</span>
                     </Button>
@@ -122,7 +122,7 @@ export const Footer = () => {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button variant="outline" size="icon" className="rounded-full hover:bg-gradient-to-r hover:from-[hsl(25_95%_53%)] hover:to-[hsl(15_88%_45%)] hover:text-white hover:border-transparent transition-all duration-300">
                       <Instagram className="h-4 w-4" />
                       <span className="sr-only">Instagram</span>
                     </Button>
@@ -136,7 +136,7 @@ export const Footer = () => {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button variant="outline" size="icon" className="rounded-full hover:bg-gradient-to-r hover:from-[hsl(25_95%_53%)] hover:to-[hsl(15_88%_45%)] hover:text-white hover:border-transparent transition-all duration-300">
                       <Linkedin className="h-4 w-4" />
                       <span className="sr-only">LinkedIn</span>
                     </Button>
