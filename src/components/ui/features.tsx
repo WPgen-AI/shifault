@@ -30,7 +30,7 @@ export function Features() {
                                     </svg>
                                     <span className="mx-auto block w-fit text-5xl font-semibold text-foreground">100%</span>
                                 </div>
-                                <h2 className="mt-6 text-center text-3xl font-semibold text-foreground">Tamamen Özelleştirilebilir</h2>
+                                <h2 className="mt-6 text-center text-3xl font-semibold text-foreground">Fully Customizable</h2>
                             </CardContent>
                         </Card>
                         <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 border-border bg-card hover:shadow-glow transition-smooth hover-lift">
@@ -61,8 +61,8 @@ export function Features() {
                                     </svg>
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                                    <h2 className="text-lg font-medium transition text-foreground">Güvenlik Önceliğimiz</h2>
-                                    <p className="text-muted-foreground">Web siteniz en üst düzey güvenlik standartlarıyla korunur ve otomatik güvenlik güncellemeleri alır.</p>
+                                    <h2 className="text-lg font-medium transition text-foreground">Security is Our Priority</h2>
+                                    <p className="text-muted-foreground">Your website is protected with top-level security standards and receives automatic security updates.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -104,8 +104,8 @@ export function Features() {
                                     </svg>
                                 </div>
                                 <div className="relative z-10 mt-14 space-y-2 text-center">
-                                    <h2 className="text-lg font-medium transition text-foreground">Işık Hızında Performans</h2>
-                                    <p className="text-muted-foreground">Web siteniz her zaman hızlı ve optimize edilmiş şekilde çalışır. CDN desteği ile dünya çapında hızlı erişim.</p>
+                                    <h2 className="text-lg font-medium transition text-foreground">Lightning Fast Performance</h2>
+                                    <p className="text-muted-foreground">Your website always runs fast and optimized. Global fast access with CDN support.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -116,8 +116,8 @@ export function Features() {
                                         <Shield className="m-auto size-5 text-primary" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="text-lg font-medium text-foreground transition">Profesyonel Tasarım</h2>
-                                        <p className="text-muted-foreground">Modern ve kullanıcı dostu arayüzler ile markanızı en iyi şekilde temsil eden tasarımlar.</p>
+                                        <h2 className="text-lg font-medium text-foreground transition">Professional Design</h2>
+                                        <p className="text-muted-foreground">Modern and user-friendly interfaces with designs that best represent your brand.</p>
                                     </div>
                                 </div>
                                 <div className="rounded-tl-lg relative -mb-6 -mr-6 mt-6 h-fit border-l border-t border-border p-6 py-6 sm:ml-6">
@@ -156,14 +156,14 @@ export function Features() {
                                         <Users className="m-auto size-6 text-primary" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="text-lg font-medium transition text-foreground">Takım Desteği</h2>
-                                        <p className="text-muted-foreground">Uzman ekibimiz her zaman yanınızda. 7/24 destek ve profesyonel danışmanlık hizmetleri.</p>
+                                        <h2 className="text-lg font-medium transition text-foreground">Team Support</h2>
+                                        <p className="text-muted-foreground">Our expert team is always with you. 24/7 support and professional consulting services.</p>
                                     </div>
                                 </div>
                                 <div className="before:bg-border relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">
                                     <div className="relative flex h-full flex-col justify-center space-y-6 py-6">
                                         <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                                            <span className="block h-fit rounded border border-border bg-card px-2 py-1 text-xs shadow-sm text-foreground">Uzman</span>
+                                            <span className="block h-fit rounded border border-border bg-card px-2 py-1 text-xs shadow-sm text-foreground">Expert</span>
                                             <div className="ring-background size-7 ring-4">
                                                 <div className="size-full rounded-full bg-gradient-primary"></div>
                                             </div>
@@ -172,10 +172,10 @@ export function Features() {
                                             <div className="ring-background size-8 ring-4">
                                                 <div className="size-full rounded-full bg-gradient-accent"></div>
                                             </div>
-                                            <span className="block h-fit rounded border border-border bg-card px-2 py-1 text-xs shadow-sm text-foreground">Tasarımcı</span>
+                                            <span className="block h-fit rounded border border-border bg-card px-2 py-1 text-xs shadow-sm text-foreground">Designer</span>
                                         </div>
                                         <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                                            <span className="block h-fit rounded border border-border bg-card px-2 py-1 text-xs shadow-sm text-foreground">Geliştirici</span>
+                                            <span className="block h-fit rounded border border-border bg-card px-2 py-1 text-xs shadow-sm text-foreground">Developer</span>
                                             <div className="ring-background size-7 ring-4">
                                                 <div className="size-full rounded-full bg-gradient-surface"></div>
                                             </div>
