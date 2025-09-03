@@ -4,58 +4,58 @@ import { motion } from "motion/react";
 
 const testimonials = [
   {
-    text: "Bu ERP sistemimizi tamamen dönüştürdü, finans ve envanter yönetimini kolaylaştırdı. Bulut tabanlı platform sayesinde uzaktan bile verimli çalışabiliyoruz.",
+    text: "This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely.",
     image: "https://randomuser.me/api/portraits/women/1.jpg",
-    name: "Ayşe Yılmaz",
-    role: "Operasyon Müdürü",
+    name: "Sarah Johnson",
+    role: "Operations Manager",
   },
   {
-    text: "ERP sisteminin implementasyonu çok kolay ve hızlıydı. Özelleştirilebilir ve kullanıcı dostu arayüz sayesinde ekip eğitimi zahmetsizdi.",
+    text: "Implementing this ERP was smooth and quick. The customizable, user-friendly interface made team training effortless.",
     image: "https://randomuser.me/api/portraits/men/2.jpg",
-    name: "Mehmet Kaya",
-    role: "IT Müdürü",
+    name: "Michael Chen",
+    role: "IT Manager",
   },
   {
-    text: "Destek ekibi olağanüstü, kurulum sürecinde bize rehberlik ettiler ve sürekli yardım sağlayarak memnuniyetimizi garanti ettiler.",
+    text: "The support team is exceptional, guiding us through setup and providing ongoing assistance, ensuring our satisfaction.",
     image: "https://randomuser.me/api/portraits/women/3.jpg",
-    name: "Zeynep Özkan",
-    role: "Müşteri Destek Lideri",
+    name: "Emily Davis",
+    role: "Customer Support Lead",
   },
   {
-    text: "Bu ERP'nin sorunsuz entegrasyonu iş operasyonlarımızı ve verimliliğimizi artırdı. Sezgisel arayüzü için kesinlikle tavsiye ediyorum.",
+    text: "This ERP's seamless integration enhanced our business operations and efficiency. Highly recommend for its intuitive interface.",
     image: "https://randomuser.me/api/portraits/men/4.jpg",
-    name: "Ali Demir",
+    name: "David Wilson",
     role: "CEO",
   },
   {
-    text: "Güçlü özellikleri ve hızlı desteği iş akışımızı dönüştürdü, bizi önemli ölçüde daha verimli hale getirdi.",
+    text: "Its robust features and quick support have transformed our workflow, making us significantly more efficient.",
     image: "https://randomuser.me/api/portraits/women/5.jpg",
-    name: "Fatma Şahin",
-    role: "Proje Müdürü",
+    name: "Jessica Brown",
+    role: "Project Manager",
   },
   {
-    text: "Sorunsuz implementasyon beklentileri aştı. Süreçleri kolaylaştırarak genel iş performansını iyileştirdi.",
+    text: "The smooth implementation exceeded expectations. It streamlined processes, improving overall business performance.",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
-    name: "Elif Çelik",
-    role: "İş Analisti",
+    name: "Amanda Taylor",
+    role: "Business Analyst",
   },
   {
-    text: "İş fonksiyonlarımız kullanıcı dostu tasarım ve olumlu müşteri geri bildirimlerle gelişti.",
+    text: "Our business functions improved with a user-friendly design and positive customer feedback.",
     image: "https://randomuser.me/api/portraits/men/7.jpg",
-    name: "Burak Arslan",
-    role: "Pazarlama Müdürü",
+    name: "Robert Martinez",
+    role: "Marketing Director",
   },
   {
-    text: "İhtiyaçlarımızı anlayarak operasyonlarımızı geliştiren, beklentileri aşan bir çözüm sundular.",
+    text: "They delivered a solution that exceeded expectations, understanding our needs and enhancing our operations.",
     image: "https://randomuser.me/api/portraits/women/8.jpg",
-    name: "Selin Koç",
-    role: "Satış Müdürü",
+    name: "Lisa Anderson",
+    role: "Sales Manager",
   },
   {
-    text: "Bu ERP'yi kullanarak online varlığımız ve dönüşümlerimiz önemli ölçüde iyileşti, iş performansını artırdı.",
+    text: "Using this ERP, our online presence and conversions significantly improved, boosting business performance.",
     image: "https://randomuser.me/api/portraits/men/9.jpg",
-    name: "Emre Yıldız",
-    role: "E-ticaret Müdürü",
+    name: "James Thompson",
+    role: "E-commerce Manager",
   },
 ];
 
@@ -123,13 +123,13 @@ export const Testimonials = () => {
           className="flex flex-col items-center justify-center max-w-3xl mx-auto text-center mb-16"
         >
           <div className="inline-flex items-center rounded-lg border px-3 py-1 text-xs font-medium mb-6">
-            Müşteri Yorumları
+            Testimonials
           </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-4">
-            Müşterilerimiz Ne Diyor?
+            What Our Customers Say
           </h2>
           <p className="text-lg text-muted-foreground">
-            Platformumuzu kullanan müşterilerimizin deneyimlerini öğrenin.
+            See what our customers have to say about our platform.
           </p>
         </motion.div>
 
