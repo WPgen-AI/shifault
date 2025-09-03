@@ -92,8 +92,7 @@ export const Hero = () => {
             </h2>
 
             <p className="text-muted-foreground py-4">
-              I craft beautiful, modern websites without code, and provide design resources
-              to empower others. Expert in creating solutions like{" "}
+              Expert in creating solutions like{" "}
               <span className="text-accent-primary font-semibold">
                 <TypeWriter strings={talkAbout} />
               </span>.
